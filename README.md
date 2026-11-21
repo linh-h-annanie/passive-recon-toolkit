@@ -19,7 +19,7 @@ Posts and Telecommunications Institute of Technology (PTIT).
 |**Instructor**|ThS. Phan Nghĩa Hiệp|Giảng viên hướng dẫn|`hieppn@ptithcm.edu.vn`|
 |**N25DCAT079**|Đặng Quang Huy||`n25dcat079@student.ptithcm.edu.vn`|
 |**N25DCAT086**|Hồ Thị Trúc Linh|[@linh-h-annanie](https://github.com/linh-h-annanie)|`n25dcat086@student.ptithcm.edu.vn`|
-|**N25DCAT099**|Thân Lê Nhật Quang||`n25dcat099@student.ptithcm.edu.vn`|
+|**N25DCAT099**|Thân Lê Nhật Quang|[@lailawan](https://github.com/lailawan)|`n25dcat099@student.ptithcm.edu.vn`|
 |**N25DCAT097**|Trần Thiên Hoàng Quân||`n25dcat097@student.ptithcm.edu.vn`|
 |**N25DCAT100**|Thái Mỹ Quyên||`n25dcat100@student.ptithcm.edu.vn`|
 
