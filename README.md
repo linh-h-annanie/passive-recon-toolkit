@@ -29,47 +29,26 @@ Posts and Telecommunications Institute of Technology (PTIT).
 
 ```text
 .
-
 ├── main.py              
-
 ├── modules/
-
-│   ├── whois\_mod.py     
-
-│   ├── dns\_mod.py       
-
-│   ├── crtsh\_mod.py     
-
-│   ├── shodan\_mod.py
-
-│   ├── censys\_mod.py
-
-│   ├── ipinfo\_mod.py
-
-│   ├── apivoid\_mod.py
-
-│   └── dorks\_mod.py     
-
+│   ├── whois_mod.py     
+│   ├── dns_mod.py       
+│   ├── crtsh_mod.py     
+│   ├── shodan_mod.py
+│   ├── censys_mod.py
+│   ├── ipinfo_mod.py
+│   ├── apivoid_mod.py
+│   └── dorks_mod.py     
 ├── core/
-
 │   ├── config.py              
-
-│   └── merger.py       
-
-├── output/              
-
+│   └── merger.py                
+├── output/             
 ├── requirements.txt
-
 └── README.md
-
-
 ```
-
 \---
 
 ## References
-
-
 
 Nishant Krishna, Python for Cybersecurity Cookbook.
 
