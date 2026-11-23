@@ -1,0 +1,12 @@
+{
+  "repository": "https://github.com/opsdisk/pagodo",
+  "commit": "26fbf13ae117391a6cac8be81cef7524a1cb9dfa",
+  "files": [
+    "pagodo.py",
+    "LICENSE"
+  ],
+  "sha256": {
+    "pagodo.py": "07a2586271129a7ba0c92bfb34849f51639f99d3d403e83ff028d477aacd47bc",
+    "LICENSE": "8ceb4b9ee5adedde47b31e975c1d90c73ad27b6b165a1dcd80c7c545eb65b903"
+  }
+}
