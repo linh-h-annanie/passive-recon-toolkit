@@ -28,7 +28,16 @@ def clean_domain(value):
     return text if DOMAIN_RE.match(text) else None
 
 
+def is_public_ip(value):
+    try:
+        return ipaddress.ip_address(str(value).strip()).is_global
+    except ValueError:
+        return False
+
+
 def reverse_lookup(ip, timeout=3):
+    if not is_public_ip(ip):  # never send private/loopback/reserved addresses to the resolver
+        return None
     executor = ThreadPoolExecutor(max_workers=1)
     try:
         return executor.submit(socket.gethostbyaddr, ip).result(timeout=timeout)[0]
@@ -65,6 +74,14 @@ def query_type(resolver, domain, record_type):
     return [txt_text(a) if record_type == "TXT" else a.to_text() for a in answers], None
 
 
+def make_resolver():
+    import dns.resolver
+    resolver = dns.resolver.Resolver()
+    resolver.timeout = 3
+    resolver.lifetime = 5
+    return resolver
+
+
 def result(status, data=None, error=None, source="dnspython + socket"):
     return {"module": "dns", "status": status, "source": source, "data": data or {}, "error": error, "timestamp": now_iso()}
 
@@ -72,18 +89,18 @@ def result(status, data=None, error=None, source="dnspython + socket"):
 def run(target, config=None):
     target = str(target).strip()
     if is_ip(target):
+        if not is_public_ip(target):
+            return result("skipped", error="Private, loopback or reserved IP: public targets only", source="socket reverse lookup")
         return result("ok", {"records": {}, "ips": [target], "reverse": reverse_many([target]), "notes": ["Input is an IP; forward lookup skipped"]}, source="socket reverse lookup")
     domain = clean_domain(target)
     if not domain:
         return result("error", error=f"Invalid domain: {target!r}")
     try:
-        import dns.resolver
-        resolver = dns.resolver.Resolver()
-        resolver.timeout = 3
-        resolver.lifetime = 5
         records, notes = {}, []
-        for record_type in RECORD_TYPES:
-            values, note = query_type(resolver, domain, record_type)
+        # one resolver per query: nothing is shared between threads, and the worst case is ~5 s instead of 7 x 5 s
+        with ThreadPoolExecutor(max_workers=len(RECORD_TYPES)) as pool:
+            outcomes = list(pool.map(lambda t: query_type(make_resolver(), domain, t), RECORD_TYPES))
+        for record_type, (values, note) in zip(RECORD_TYPES, outcomes):
             records[record_type] = values
             if note:
                 notes.append(note)
