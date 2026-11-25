@@ -1,7 +1,3 @@
-"""Deterministic tests for Linh's three modules (no network, no API keys).
-
-Run from the repository root:  python -m unittest discover -s tests -v
-"""
 import json
 import sys
 import time
