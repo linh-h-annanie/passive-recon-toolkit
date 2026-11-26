@@ -1,20 +1,2 @@
-# Môi trường ảo và file biên dịch
-.venv/
-venv/
-__pycache__/
-*.pyc
-
-# BÍ MẬT: không bao giờ commit
 .env
-*.key
-
-# Kết quả chạy thật (chỉ giữ lại thư mục samples/ làm ví dụ)
-output/*
-!output/.gitkeep
-!output/samples/
-
-# Công cụ soạn thảo, hệ điều hành
-.idea/
-.vscode/
-.DS_Store
-Thumbs.db
+22-11_APIkey.txt
