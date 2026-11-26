@@ -1,0 +1,1050 @@
+{
+  "target": "example.net",
+  "shodan": {
+    "module": "shodan",
+    "status": "ok",
+    "source": "Shodan",
+    "data": {
+      "ips_queried": [
+        "172.66.175.59",
+        "104.20.21.8"
+      ],
+      "hosts": [
+        {
+          "ip": "172.66.175.59",
+          "org": "Cloudflare, Inc.",
+          "isp": "Cloudflare, Inc.",
+          "asn": "AS13335",
+          "country": "United States",
+          "city": "San Francisco",
+          "os": null,
+          "hostnames": [
+            "portal.transperfect.com.cdn.cloudflare.net",
+            "sso-ci.transperfect.com.cdn.cloudflare.net"
+          ],
+          "ports": [
+            80,
+            443,
+            2052,
+            2053,
+            2082,
+            2083,
+            2086,
+            2087,
+            2095,
+            2096,
+            8080,
+            8443,
+            8880
+          ],
+          "vulns": []
+        },
+        {
+          "ip": "104.20.21.8",
+          "org": "Cloudflare, Inc.",
+          "isp": "Cloudflare, Inc.",
+          "asn": "AS13335",
+          "country": "United States",
+          "city": "San Francisco",
+          "os": null,
+          "hostnames": [
+            "sso-stg.transperfect.com.cdn.cloudflare.net",
+            "idpmanager-ci.transperfect.com.cdn.cloudflare.net"
+          ],
+          "ports": [
+            80,
+            443,
+            2052,
+            2053,
+            2082,
+            2083,
+            2086,
+            2087,
+            2095,
+            2096,
+            8080,
+            8443,
+            8880
+          ],
+          "vulns": []
+        }
+      ],
+      "services": [
+        {
+          "ip": "172.66.175.59",
+          "port": 80,
+          "transport": "tcp",
+          "service": "http",
+          "product": null,
+          "version": null,
+          "banner": "HTTP/1.1 409 Conflict Date: Wed, 25 Nov 2026 12:26:22 GMT Content-Type: text/html; charset=UTF-8 Transfer-Encoding: chunked Connection: keep-alive Cache-Control: private, max-age=0, no-store, no-cache",
+          "source": "Shodan"
+        },
+        {
+          "ip": "172.66.175.59",
+          "port": 443,
+          "transport": "tcp",
+          "service": "CloudFlare",
+          "product": "CloudFlare",
+          "version": null,
+          "banner": "HTTP/1.1 400 Bad Request Server: cloudflare Date: Wed, 25 Nov 2026 12:01:30 GMT Content-Type: text/html Content-Length: 655 Connection: close CF-RAY: -",
+          "source": "Shodan"
+        },
+        {
+          "ip": "172.66.175.59",
+          "port": 2052,
+          "transport": "tcp",
+          "service": "auto",
+          "product": null,
+          "version": null,
+          "banner": "HTTP/1.1 403 Forbidden Date: Tue, 24 Nov 2026 03:37:26 GMT Content-Type: text/plain; charset=UTF-8 Content-Length: 17 Connection: keep-alive Cache-Control: private, max-age=0, no-store, no-cache, must",
+          "source": "Shodan"
+        },
+        {
+          "ip": "172.66.175.59",
+          "port": 2053,
+          "transport": "tcp",
+          "service": "auto",
+          "product": null,
+          "version": null,
+          "banner": "HTTP/1.1 400 Bad Request Server: cloudflare Date: Wed, 25 Nov 2026 08:23:55 GMT Content-Type: text/html Content-Length: 655 Connection: close CF-RAY: -",
+          "source": "Shodan"
+        },
+        {
+          "ip": "172.66.175.59",
+          "port": 2082,
+          "transport": "tcp",
+          "service": "http-simple-new",
+          "product": null,
+          "version": null,
+          "banner": "HTTP/1.1 403 Forbidden Date: Mon, 16 Nov 2026 11:59:47 GMT Content-Type: text/plain; charset=UTF-8 Content-Length: 17 Connection: keep-alive Cache-Control: private, max-age=0, no-store, no-cache, must",
+          "source": "Shodan"
+        },
+        {
+          "ip": "172.66.175.59",
+          "port": 2083,
+          "transport": "tcp",
+          "service": "https-simple-new",
+          "product": null,
+          "version": null,
+          "banner": "HTTP/1.1 400 Bad Request Server: cloudflare Date: Tue, 24 Nov 2026 09:33:01 GMT Content-Type: text/html Content-Length: 655 Connection: close CF-RAY: -",
+          "source": "Shodan"
+        },
+        {
+          "ip": "172.66.175.59",
+          "port": 2086,
+          "transport": "tcp",
+          "service": "http-simple-new",
+          "product": null,
+          "version": null,
+          "banner": "HTTP/1.1 403 Forbidden Date: Tue, 24 Nov 2026 05:05:28 GMT Content-Type: text/plain; charset=UTF-8 Content-Length: 17 Connection: keep-alive Cache-Control: private, max-age=0, no-store, no-cache, must",
+          "source": "Shodan"
+        },
+        {
+          "ip": "172.66.175.59",
+          "port": 2087,
+          "transport": "tcp",
+          "service": "language-server-protocol",
+          "product": null,
+          "version": null,
+          "banner": "HTTP/1.1 400 Bad Request Server: cloudflare Date: Mon, 23 Nov 2026 13:30:50 GMT Content-Type: text/html Content-Length: 155 Connection: close CF-RAY: -  <html> <head><title>400 Bad Request</title></he",
+          "source": "Shodan"
+        },
+        {
+          "ip": "172.66.175.59",
+          "port": 2095,
+          "transport": "tcp",
+          "service": "auto",
+          "product": null,
+          "version": null,
+          "banner": "HTTP/1.1 403 Forbidden Date: Thu, 19 Nov 2026 23:55:02 GMT Content-Type: text/plain; charset=UTF-8 Content-Length: 17 Connection: keep-alive Cache-Control: private, max-age=0, no-store, no-cache, must",
+          "source": "Shodan"
+        },
+        {
+          "ip": "172.66.175.59",
+          "port": 2096,
+          "transport": "tcp",
+          "service": "auto",
+          "product": null,
+          "version": null,
+          "banner": "HTTP/1.1 400 Bad Request Server: cloudflare Date: Tue, 17 Nov 2026 12:36:07 GMT Content-Type: text/html Content-Length: 655 Connection: close CF-RAY: -",
+          "source": "Shodan"
+        },
+        {
+          "ip": "172.66.175.59",
+          "port": 8080,
+          "transport": "tcp",
+          "service": "http-simple-new",
+          "product": null,
+          "version": null,
+          "banner": "HTTP/1.1 403 Forbidden Date: Sat, 21 Nov 2026 02:21:37 GMT Content-Type: text/plain; charset=UTF-8 Content-Length: 17 Connection: keep-alive Cache-Control: private, max-age=0, no-store, no-cache, must",
+          "source": "Shodan"
+        },
+        {
+          "ip": "172.66.175.59",
+          "port": 8443,
+          "transport": "tcp",
+          "service": "CloudFlare",
+          "product": "CloudFlare",
+          "version": null,
+          "banner": "HTTP/1.1 400 Bad Request Server: cloudflare Date: Sun, 22 Nov 2026 18:03:50 GMT Content-Type: text/html Content-Length: 655 Connection: close CF-RAY: -",
+          "source": "Shodan"
+        },
+        {
+          "ip": "172.66.175.59",
+          "port": 8880,
+          "transport": "tcp",
+          "service": "https-simple-new",
+          "product": null,
+          "version": null,
+          "banner": "HTTP/1.1 403 Forbidden Date: Thu, 19 Nov 2026 17:10:54 GMT Content-Type: text/plain; charset=UTF-8 Content-Length: 17 Connection: keep-alive Cache-Control: private, max-age=0, no-store, no-cache, must",
+          "source": "Shodan"
+        },
+        {
+          "ip": "104.20.21.8",
+          "port": 80,
+          "transport": "tcp",
+          "service": "http",
+          "product": null,
+          "version": null,
+          "banner": "HTTP/1.1 409 Conflict Date: Wed, 25 Nov 2026 07:24:19 GMT Content-Type: text/html; charset=UTF-8 Transfer-Encoding: chunked Connection: keep-alive Cache-Control: private, max-age=0, no-store, no-cache",
+          "source": "Shodan"
+        },
+        {
+          "ip": "104.20.21.8",
+          "port": 443,
+          "transport": "tcp",
+          "service": "CloudFlare",
+          "product": "CloudFlare",
+          "version": null,
+          "banner": "HTTP/1.1 400 Bad Request Server: cloudflare Date: Wed, 25 Nov 2026 10:50:22 GMT Content-Type: text/html Content-Length: 655 Connection: close CF-RAY: -",
+          "source": "Shodan"
+        },
+        {
+          "ip": "104.20.21.8",
+          "port": 2052,
+          "transport": "tcp",
+          "service": "auto",
+          "product": null,
+          "version": null,
+          "banner": "HTTP/1.1 403 Forbidden Date: Tue, 24 Nov 2026 03:37:10 GMT Content-Type: text/plain; charset=UTF-8 Content-Length: 17 Connection: keep-alive Cache-Control: private, max-age=0, no-store, no-cache, must",
+          "source": "Shodan"
+        },
+        {
+          "ip": "104.20.21.8",
+          "port": 2053,
+          "transport": "tcp",
+          "service": "auto",
+          "product": null,
+          "version": null,
+          "banner": "HTTP/1.1 400 Bad Request Server: cloudflare Date: Thu, 19 Nov 2026 01:45:53 GMT Content-Type: text/html Content-Length: 655 Connection: close CF-RAY: -",
+          "source": "Shodan"
+        },
+        {
+          "ip": "104.20.21.8",
+          "port": 2082,
+          "transport": "tcp",
+          "service": "http-simple-new",
+          "product": null,
+          "version": null,
+          "banner": "HTTP/1.1 403 Forbidden Date: Tue, 24 Nov 2026 22:04:37 GMT Content-Type: text/plain; charset=UTF-8 Content-Length: 17 Connection: keep-alive Cache-Control: private, max-age=0, no-store, no-cache, must",
+          "source": "Shodan"
+        },
+        {
+          "ip": "104.20.21.8",
+          "port": 2083,
+          "transport": "tcp",
+          "service": "https-simple-new",
+          "product": null,
+          "version": null,
+          "banner": "HTTP/1.1 400 Bad Request Server: cloudflare Date: Tue, 24 Nov 2026 09:40:11 GMT Content-Type: text/html Content-Length: 655 Connection: close CF-RAY: -",
+          "source": "Shodan"
+        },
+        {
+          "ip": "104.20.21.8",
+          "port": 2086,
+          "transport": "tcp",
+          "service": "http-simple-new",
+          "product": null,
+          "version": null,
+          "banner": "HTTP/1.1 403 Forbidden Date: Tue, 24 Nov 2026 03:04:29 GMT Content-Type: text/plain; charset=UTF-8 Content-Length: 17 Connection: keep-alive Cache-Control: private, max-age=0, no-store, no-cache, must",
+          "source": "Shodan"
+        },
+        {
+          "ip": "104.20.21.8",
+          "port": 2087,
+          "transport": "tcp",
+          "service": "https-simple-new",
+          "product": null,
+          "version": null,
+          "banner": "HTTP/1.1 400 Bad Request Server: cloudflare Date: Wed, 25 Nov 2026 02:12:26 GMT Content-Type: text/html Content-Length: 655 Connection: close CF-RAY: -",
+          "source": "Shodan"
+        },
+        {
+          "ip": "104.20.21.8",
+          "port": 2095,
+          "transport": "tcp",
+          "service": "auto",
+          "product": null,
+          "version": null,
+          "banner": "HTTP/1.1 403 Forbidden Date: Tue, 17 Nov 2026 01:26:25 GMT Content-Type: text/plain; charset=UTF-8 Content-Length: 17 Connection: keep-alive Cache-Control: private, max-age=0, no-store, no-cache, must",
+          "source": "Shodan"
+        },
+        {
+          "ip": "104.20.21.8",
+          "port": 2096,
+          "transport": "tcp",
+          "service": "auto",
+          "product": null,
+          "version": null,
+          "banner": "HTTP/1.1 400 Bad Request Server: cloudflare Date: Sat, 21 Nov 2026 10:54:29 GMT Content-Type: text/html Content-Length: 655 Connection: close CF-RAY: -",
+          "source": "Shodan"
+        },
+        {
+          "ip": "104.20.21.8",
+          "port": 8080,
+          "transport": "tcp",
+          "service": "http-simple-new",
+          "product": null,
+          "version": null,
+          "banner": "HTTP/1.1 403 Forbidden Date: Mon, 23 Nov 2026 14:06:55 GMT Content-Type: text/plain; charset=UTF-8 Content-Length: 17 Connection: keep-alive Cache-Control: private, max-age=0, no-store, no-cache, must",
+          "source": "Shodan"
+        },
+        {
+          "ip": "104.20.21.8",
+          "port": 8443,
+          "transport": "tcp",
+          "service": "CloudFlare",
+          "product": "CloudFlare",
+          "version": null,
+          "banner": "HTTP/1.1 400 Bad Request Server: cloudflare Date: Tue, 24 Nov 2026 22:23:29 GMT Content-Type: text/html Content-Length: 655 Connection: close CF-RAY: -",
+          "source": "Shodan"
+        },
+        {
+          "ip": "104.20.21.8",
+          "port": 8880,
+          "transport": "tcp",
+          "service": "https-simple-new",
+          "product": null,
+          "version": null,
+          "banner": "HTTP/1.1 403 Forbidden Date: Tue, 24 Nov 2026 00:01:46 GMT Content-Type: text/plain; charset=UTF-8 Content-Length: 17 Connection: keep-alive Cache-Control: private, max-age=0, no-store, no-cache, must",
+          "source": "Shodan"
+        }
+      ],
+      "total_services": 26,
+      "notes": []
+    },
+    "error": null,
+    "timestamp": "2026-11-26T04:17:41.093463+00:00"
+  },
+  "censys": {
+    "module": "censys",
+    "status": "ok",
+    "source": "Censys",
+    "data": {
+      "ips_queried": [
+        "172.66.175.59",
+        "104.20.21.8"
+      ],
+      "hosts": [
+        {
+          "ip": "172.66.175.59",
+          "org": "CLOUDFLARENET - Cloudflare, Inc.",
+          "isp": "CLOUDFLARENET - Cloudflare, Inc.",
+          "asn": "AS13335",
+          "country": "United States",
+          "city": "San Francisco",
+          "os": null,
+          "hostnames": [
+            "acsd.fbi.h-da.de",
+            "admin.velesto-uat.suite.maximo.com",
+            "alias-mediencampus-hda.dv-serviceportal.de",
+            "alias-mediencampus-hda.ryze-cloud.de",
+            "api.velesto-uat.suite.maximo.com",
+            "auth.velesto-uat.suite.maximo.com",
+            "danet.fbi.h-da.de",
+            "dashboard-ci.transperfect.com",
+            "dashboard-ci.transperfect.com.cdn.cloudflare.net",
+            "example.net",
+            "fbmd-staging.h-da.de",
+            "fbmd-staging.h-da.de.cdn.cloudflare.net",
+            "home.velesto-uat.suite.maximo.com",
+            "idpmanager-ci.transperfect.com",
+            "idpmanager-ci.transperfect.com.cdn.cloudflare.net",
+            "idpmanager-stg.transperfect.com",
+            "idpmanager.transperfect.com",
+            "idpmanager.transperfect.com.cdn.cloudflare.net",
+            "main-all.manage.velesto-uat.suite.maximo.com",
+            "main-cron.manage.velesto-uat.suite.maximo.com",
+            "main-jms.manage.velesto-uat.suite.maximo.com",
+            "main-mea.manage.velesto-uat.suite.maximo.com",
+            "main-rpt.manage.velesto-uat.suite.maximo.com",
+            "main-ui.manage.velesto-uat.suite.maximo.com",
+            "main.home.velesto-uat.suite.maximo.com",
+            "main.manage.velesto-uat.suite.maximo.com",
+            "manage.velesto-uat.suite.maximo.com",
+            "maxinst.manage.velesto-uat.suite.maximo.com",
+            "mediencampus.h-da.de",
+            "mediencampus.h-da.de.cdn.cloudflare.net",
+            "paym8online.com",
+            "portal.transperfect.com",
+            "portal.transperfect.com.cdn.cloudflare.net",
+            "qa-transport.transperfect.com",
+            "qa-transport.transperfect.com.cdn.cloudflare.net",
+            "sls.velesto-uat.suite.maximo.com",
+            "ssl.okdewit.com",
+            "sso-ci.transperfect.com",
+            "sso-ci.transperfect.com.cdn.cloudflare.net",
+            "sso-mtls.transperfect.com",
+            "sso-mtls.transperfect.com.cdn.cloudflare.net",
+            "sso-stg.transperfect.com",
+            "sso-stg.transperfect.com.cdn.cloudflare.net",
+            "sso.transperfect.com",
+            "sso.transperfect.com.cdn.cloudflare.net",
+            "telemadrid-cpc-bin.bbnx.int.bitban.com",
+            "telemadrid.es.bbnx.int.bitban.com",
+            "telemadrid.es.bbnx.pre.bitban.com",
+            "test.paym8online.com",
+            "visitsyv.com",
+            "www-staging.fbi.h-da.de",
+            "www-staging.fbi.h-da.de.cdn.cloudflare.net",
+            "www.example.net",
+            "www.fbi.h-da.de",
+            "www.fbi.h-da.de.cdn.cloudflare.net",
+            "www.paym8online.com",
+            "www.visitsyv.com"
+          ],
+          "ports": [
+            80,
+            443,
+            2052,
+            2053,
+            2082,
+            2083,
+            2086,
+            2087,
+            2095,
+            2096,
+            8080,
+            8443,
+            8880
+          ],
+          "vulns": []
+        },
+        {
+          "ip": "104.20.21.8",
+          "org": "CLOUDFLARENET - Cloudflare, Inc.",
+          "isp": "CLOUDFLARENET - Cloudflare, Inc.",
+          "asn": "AS13335",
+          "country": "United States",
+          "city": "San Francisco",
+          "os": null,
+          "hostnames": [
+            "acsd.fbi.h-da.de",
+            "admin.velesto-uat.suite.maximo.com",
+            "alias-mediencampus-hda.dv-serviceportal.de",
+            "alias-mediencampus-hda.ryze-cloud.de",
+            "api.velesto-uat.suite.maximo.com",
+            "auth.velesto-uat.suite.maximo.com",
+            "danet.fbi.h-da.de",
+            "dashboard-ci.transperfect.com",
+            "dashboard-ci.transperfect.com.cdn.cloudflare.net",
+            "example.net",
+            "fbmd-staging.h-da.de",
+            "fbmd-staging.h-da.de.cdn.cloudflare.net",
+            "home.velesto-uat.suite.maximo.com",
+            "idpmanager-ci.transperfect.com",
+            "idpmanager-ci.transperfect.com.cdn.cloudflare.net",
+            "idpmanager-stg.transperfect.com",
+            "idpmanager.transperfect.com",
+            "idpmanager.transperfect.com.cdn.cloudflare.net",
+            "main-all.manage.velesto-uat.suite.maximo.com",
+            "main-cron.manage.velesto-uat.suite.maximo.com",
+            "main-jms.manage.velesto-uat.suite.maximo.com",
+            "main-mea.manage.velesto-uat.suite.maximo.com",
+            "main-rpt.manage.velesto-uat.suite.maximo.com",
+            "main-ui.manage.velesto-uat.suite.maximo.com",
+            "main.home.velesto-uat.suite.maximo.com",
+            "main.manage.velesto-uat.suite.maximo.com",
+            "manage.velesto-uat.suite.maximo.com",
+            "maxinst.manage.velesto-uat.suite.maximo.com",
+            "mediencampus.h-da.de",
+            "mediencampus.h-da.de.cdn.cloudflare.net",
+            "paym8online.com",
+            "portal.transperfect.com",
+            "portal.transperfect.com.cdn.cloudflare.net",
+            "qa-transport.transperfect.com",
+            "qa-transport.transperfect.com.cdn.cloudflare.net",
+            "sls.velesto-uat.suite.maximo.com",
+            "ssl.okdewit.com",
+            "sso-ci.transperfect.com",
+            "sso-ci.transperfect.com.cdn.cloudflare.net",
+            "sso-mtls.transperfect.com",
+            "sso-mtls.transperfect.com.cdn.cloudflare.net",
+            "sso-stg.transperfect.com",
+            "sso-stg.transperfect.com.cdn.cloudflare.net",
+            "sso.transperfect.com",
+            "sso.transperfect.com.cdn.cloudflare.net",
+            "telemadrid-cpc-bin.bbnx.int.bitban.com",
+            "telemadrid.es.bbnx.int.bitban.com",
+            "telemadrid.es.bbnx.pre.bitban.com",
+            "test.paym8online.com",
+            "visitsyv.com",
+            "www-staging.fbi.h-da.de",
+            "www-staging.fbi.h-da.de.cdn.cloudflare.net",
+            "www.example.net",
+            "www.fbi.h-da.de",
+            "www.fbi.h-da.de.cdn.cloudflare.net",
+            "www.paym8online.com",
+            "www.visitsyv.com"
+          ],
+          "ports": [
+            80,
+            443,
+            2052,
+            2053,
+            2082,
+            2083,
+            2086,
+            2087,
+            2095,
+            2096,
+            8080,
+            8443,
+            8880
+          ],
+          "vulns": []
+        }
+      ],
+      "services": [
+        {
+          "ip": "172.66.175.59",
+          "port": 80,
+          "transport": "tcp",
+          "service": "HTTP",
+          "product": "cloudflare_load_balancer",
+          "version": null,
+          "banner": "",
+          "source": "Censys"
+        },
+        {
+          "ip": "172.66.175.59",
+          "port": 443,
+          "transport": "tcp",
+          "service": "HTTP",
+          "product": "cloudflare_load_balancer",
+          "version": null,
+          "banner": "",
+          "source": "Censys"
+        },
+        {
+          "ip": "172.66.175.59",
+          "port": 2052,
+          "transport": "tcp",
+          "service": "HTTP",
+          "product": "cloudflare_load_balancer",
+          "version": null,
+          "banner": "",
+          "source": "Censys"
+        },
+        {
+          "ip": "172.66.175.59",
+          "port": 2053,
+          "transport": "tcp",
+          "service": "HTTP",
+          "product": "cloudflare_load_balancer",
+          "version": null,
+          "banner": "",
+          "source": "Censys"
+        },
+        {
+          "ip": "172.66.175.59",
+          "port": 2082,
+          "transport": "tcp",
+          "service": "HTTP",
+          "product": "cloudflare_load_balancer",
+          "version": null,
+          "banner": "",
+          "source": "Censys"
+        },
+        {
+          "ip": "172.66.175.59",
+          "port": 2083,
+          "transport": "tcp",
+          "service": "HTTP",
+          "product": "cloudflare_load_balancer",
+          "version": null,
+          "banner": "",
+          "source": "Censys"
+        },
+        {
+          "ip": "172.66.175.59",
+          "port": 2086,
+          "transport": "tcp",
+          "service": "HTTP",
+          "product": "cloudflare_load_balancer",
+          "version": null,
+          "banner": "",
+          "source": "Censys"
+        },
+        {
+          "ip": "172.66.175.59",
+          "port": 2087,
+          "transport": "tcp",
+          "service": "HTTP",
+          "product": "cloudflare_load_balancer",
+          "version": null,
+          "banner": "",
+          "source": "Censys"
+        },
+        {
+          "ip": "172.66.175.59",
+          "port": 2095,
+          "transport": "tcp",
+          "service": "HTTP",
+          "product": "cloudflare_load_balancer",
+          "version": null,
+          "banner": "",
+          "source": "Censys"
+        },
+        {
+          "ip": "172.66.175.59",
+          "port": 2096,
+          "transport": "tcp",
+          "service": "HTTP",
+          "product": "cloudflare_load_balancer",
+          "version": null,
+          "banner": "",
+          "source": "Censys"
+        },
+        {
+          "ip": "172.66.175.59",
+          "port": 8080,
+          "transport": "tcp",
+          "service": "HTTP",
+          "product": "cloudflare_load_balancer",
+          "version": null,
+          "banner": "",
+          "source": "Censys"
+        },
+        {
+          "ip": "172.66.175.59",
+          "port": 8443,
+          "transport": "tcp",
+          "service": "HTTP",
+          "product": "cloudflare_load_balancer",
+          "version": null,
+          "banner": "",
+          "source": "Censys"
+        },
+        {
+          "ip": "172.66.175.59",
+          "port": 8880,
+          "transport": "tcp",
+          "service": "HTTP",
+          "product": "cloudflare_load_balancer",
+          "version": null,
+          "banner": "",
+          "source": "Censys"
+        },
+        {
+          "ip": "104.20.21.8",
+          "port": 80,
+          "transport": "tcp",
+          "service": "HTTP",
+          "product": "cloudflare_load_balancer",
+          "version": null,
+          "banner": "",
+          "source": "Censys"
+        },
+        {
+          "ip": "104.20.21.8",
+          "port": 443,
+          "transport": "tcp",
+          "service": "HTTP",
+          "product": "cloudflare_load_balancer",
+          "version": null,
+          "banner": "",
+          "source": "Censys"
+        },
+        {
+          "ip": "104.20.21.8",
+          "port": 2052,
+          "transport": "tcp",
+          "service": "HTTP",
+          "product": "cloudflare_load_balancer",
+          "version": null,
+          "banner": "",
+          "source": "Censys"
+        },
+        {
+          "ip": "104.20.21.8",
+          "port": 2053,
+          "transport": "tcp",
+          "service": "HTTP",
+          "product": "cloudflare_load_balancer",
+          "version": null,
+          "banner": "",
+          "source": "Censys"
+        },
+        {
+          "ip": "104.20.21.8",
+          "port": 2082,
+          "transport": "tcp",
+          "service": "HTTP",
+          "product": "cloudflare_load_balancer",
+          "version": null,
+          "banner": "",
+          "source": "Censys"
+        },
+        {
+          "ip": "104.20.21.8",
+          "port": 2083,
+          "transport": "tcp",
+          "service": "HTTP",
+          "product": "cloudflare_load_balancer",
+          "version": null,
+          "banner": "",
+          "source": "Censys"
+        },
+        {
+          "ip": "104.20.21.8",
+          "port": 2086,
+          "transport": "tcp",
+          "service": "HTTP",
+          "product": "cloudflare_load_balancer",
+          "version": null,
+          "banner": "",
+          "source": "Censys"
+        },
+        {
+          "ip": "104.20.21.8",
+          "port": 2087,
+          "transport": "tcp",
+          "service": "HTTP",
+          "product": "cloudflare_load_balancer",
+          "version": null,
+          "banner": "",
+          "source": "Censys"
+        },
+        {
+          "ip": "104.20.21.8",
+          "port": 2095,
+          "transport": "tcp",
+          "service": "HTTP",
+          "product": "cloudflare_load_balancer",
+          "version": null,
+          "banner": "",
+          "source": "Censys"
+        },
+        {
+          "ip": "104.20.21.8",
+          "port": 2096,
+          "transport": "tcp",
+          "service": "HTTP",
+          "product": "cloudflare_load_balancer",
+          "version": null,
+          "banner": "",
+          "source": "Censys"
+        },
+        {
+          "ip": "104.20.21.8",
+          "port": 8080,
+          "transport": "tcp",
+          "service": "HTTP",
+          "product": "cloudflare_load_balancer",
+          "version": null,
+          "banner": "",
+          "source": "Censys"
+        },
+        {
+          "ip": "104.20.21.8",
+          "port": 8443,
+          "transport": "tcp",
+          "service": "HTTP",
+          "product": "cloudflare_load_balancer",
+          "version": null,
+          "banner": "",
+          "source": "Censys"
+        },
+        {
+          "ip": "104.20.21.8",
+          "port": 8880,
+          "transport": "tcp",
+          "service": "HTTP",
+          "product": "cloudflare_load_balancer",
+          "version": null,
+          "banner": "",
+          "source": "Censys"
+        }
+      ],
+      "total_services": 26,
+      "notes": []
+    },
+    "error": null,
+    "timestamp": "2026-11-26T04:17:43.522852+00:00"
+  },
+  "merged": {
+    "services": [
+      {
+        "ip": "104.20.21.8",
+        "port": 80,
+        "transport": "tcp",
+        "service": "http (cloudflare_load_balancer)",
+        "banner": "HTTP/1.1 409 Conflict Date: Wed, 25 Nov 2026 07:24:19 GMT Content-Type: text/html; charset=UTF-8 Transfer-Encoding: chunked Connection: keep-alive Cache-Control: private, max-age=0, no-store, no-cache",
+        "source": "Shodan, Censys"
+      },
+      {
+        "ip": "104.20.21.8",
+        "port": 443,
+        "transport": "tcp",
+        "service": "CloudFlare",
+        "banner": "HTTP/1.1 400 Bad Request Server: cloudflare Date: Wed, 25 Nov 2026 10:50:22 GMT Content-Type: text/html Content-Length: 655 Connection: close CF-RAY: -",
+        "source": "Shodan, Censys"
+      },
+      {
+        "ip": "104.20.21.8",
+        "port": 2052,
+        "transport": "tcp",
+        "service": "auto (cloudflare_load_balancer)",
+        "banner": "HTTP/1.1 403 Forbidden Date: Tue, 24 Nov 2026 03:37:10 GMT Content-Type: text/plain; charset=UTF-8 Content-Length: 17 Connection: keep-alive Cache-Control: private, max-age=0, no-store, no-cache, must",
+        "source": "Shodan, Censys"
+      },
+      {
+        "ip": "104.20.21.8",
+        "port": 2053,
+        "transport": "tcp",
+        "service": "auto (cloudflare_load_balancer)",
+        "banner": "HTTP/1.1 400 Bad Request Server: cloudflare Date: Thu, 19 Nov 2026 01:45:53 GMT Content-Type: text/html Content-Length: 655 Connection: close CF-RAY: -",
+        "source": "Shodan, Censys"
+      },
+      {
+        "ip": "104.20.21.8",
+        "port": 2082,
+        "transport": "tcp",
+        "service": "http-simple-new (cloudflare_load_balancer)",
+        "banner": "HTTP/1.1 403 Forbidden Date: Tue, 24 Nov 2026 22:04:37 GMT Content-Type: text/plain; charset=UTF-8 Content-Length: 17 Connection: keep-alive Cache-Control: private, max-age=0, no-store, no-cache, must",
+        "source": "Shodan, Censys"
+      },
+      {
+        "ip": "104.20.21.8",
+        "port": 2083,
+        "transport": "tcp",
+        "service": "https-simple-new (cloudflare_load_balancer)",
+        "banner": "HTTP/1.1 400 Bad Request Server: cloudflare Date: Tue, 24 Nov 2026 09:40:11 GMT Content-Type: text/html Content-Length: 655 Connection: close CF-RAY: -",
+        "source": "Shodan, Censys"
+      },
+      {
+        "ip": "104.20.21.8",
+        "port": 2086,
+        "transport": "tcp",
+        "service": "http-simple-new (cloudflare_load_balancer)",
+        "banner": "HTTP/1.1 403 Forbidden Date: Tue, 24 Nov 2026 03:04:29 GMT Content-Type: text/plain; charset=UTF-8 Content-Length: 17 Connection: keep-alive Cache-Control: private, max-age=0, no-store, no-cache, must",
+        "source": "Shodan, Censys"
+      },
+      {
+        "ip": "104.20.21.8",
+        "port": 2087,
+        "transport": "tcp",
+        "service": "https-simple-new (cloudflare_load_balancer)",
+        "banner": "HTTP/1.1 400 Bad Request Server: cloudflare Date: Wed, 25 Nov 2026 02:12:26 GMT Content-Type: text/html Content-Length: 655 Connection: close CF-RAY: -",
+        "source": "Shodan, Censys"
+      },
+      {
+        "ip": "104.20.21.8",
+        "port": 2095,
+        "transport": "tcp",
+        "service": "auto (cloudflare_load_balancer)",
+        "banner": "HTTP/1.1 403 Forbidden Date: Tue, 17 Nov 2026 01:26:25 GMT Content-Type: text/plain; charset=UTF-8 Content-Length: 17 Connection: keep-alive Cache-Control: private, max-age=0, no-store, no-cache, must",
+        "source": "Shodan, Censys"
+      },
+      {
+        "ip": "104.20.21.8",
+        "port": 2096,
+        "transport": "tcp",
+        "service": "auto (cloudflare_load_balancer)",
+        "banner": "HTTP/1.1 400 Bad Request Server: cloudflare Date: Sat, 21 Nov 2026 10:54:29 GMT Content-Type: text/html Content-Length: 655 Connection: close CF-RAY: -",
+        "source": "Shodan, Censys"
+      },
+      {
+        "ip": "104.20.21.8",
+        "port": 8080,
+        "transport": "tcp",
+        "service": "http-simple-new (cloudflare_load_balancer)",
+        "banner": "HTTP/1.1 403 Forbidden Date: Mon, 23 Nov 2026 14:06:55 GMT Content-Type: text/plain; charset=UTF-8 Content-Length: 17 Connection: keep-alive Cache-Control: private, max-age=0, no-store, no-cache, must",
+        "source": "Shodan, Censys"
+      },
+      {
+        "ip": "104.20.21.8",
+        "port": 8443,
+        "transport": "tcp",
+        "service": "CloudFlare",
+        "banner": "HTTP/1.1 400 Bad Request Server: cloudflare Date: Tue, 24 Nov 2026 22:23:29 GMT Content-Type: text/html Content-Length: 655 Connection: close CF-RAY: -",
+        "source": "Shodan, Censys"
+      },
+      {
+        "ip": "104.20.21.8",
+        "port": 8880,
+        "transport": "tcp",
+        "service": "https-simple-new (cloudflare_load_balancer)",
+        "banner": "HTTP/1.1 403 Forbidden Date: Tue, 24 Nov 2026 00:01:46 GMT Content-Type: text/plain; charset=UTF-8 Content-Length: 17 Connection: keep-alive Cache-Control: private, max-age=0, no-store, no-cache, must",
+        "source": "Shodan, Censys"
+      },
+      {
+        "ip": "172.66.175.59",
+        "port": 80,
+        "transport": "tcp",
+        "service": "http (cloudflare_load_balancer)",
+        "banner": "HTTP/1.1 409 Conflict Date: Wed, 25 Nov 2026 12:26:22 GMT Content-Type: text/html; charset=UTF-8 Transfer-Encoding: chunked Connection: keep-alive Cache-Control: private, max-age=0, no-store, no-cache",
+        "source": "Shodan, Censys"
+      },
+      {
+        "ip": "172.66.175.59",
+        "port": 443,
+        "transport": "tcp",
+        "service": "CloudFlare",
+        "banner": "HTTP/1.1 400 Bad Request Server: cloudflare Date: Wed, 25 Nov 2026 12:01:30 GMT Content-Type: text/html Content-Length: 655 Connection: close CF-RAY: -",
+        "source": "Shodan, Censys"
+      },
+      {
+        "ip": "172.66.175.59",
+        "port": 2052,
+        "transport": "tcp",
+        "service": "auto (cloudflare_load_balancer)",
+        "banner": "HTTP/1.1 403 Forbidden Date: Tue, 24 Nov 2026 03:37:26 GMT Content-Type: text/plain; charset=UTF-8 Content-Length: 17 Connection: keep-alive Cache-Control: private, max-age=0, no-store, no-cache, must",
+        "source": "Shodan, Censys"
+      },
+      {
+        "ip": "172.66.175.59",
+        "port": 2053,
+        "transport": "tcp",
+        "service": "auto (cloudflare_load_balancer)",
+        "banner": "HTTP/1.1 400 Bad Request Server: cloudflare Date: Wed, 25 Nov 2026 08:23:55 GMT Content-Type: text/html Content-Length: 655 Connection: close CF-RAY: -",
+        "source": "Shodan, Censys"
+      },
+      {
+        "ip": "172.66.175.59",
+        "port": 2082,
+        "transport": "tcp",
+        "service": "http-simple-new (cloudflare_load_balancer)",
+        "banner": "HTTP/1.1 403 Forbidden Date: Mon, 16 Nov 2026 11:59:47 GMT Content-Type: text/plain; charset=UTF-8 Content-Length: 17 Connection: keep-alive Cache-Control: private, max-age=0, no-store, no-cache, must",
+        "source": "Shodan, Censys"
+      },
+      {
+        "ip": "172.66.175.59",
+        "port": 2083,
+        "transport": "tcp",
+        "service": "https-simple-new (cloudflare_load_balancer)",
+        "banner": "HTTP/1.1 400 Bad Request Server: cloudflare Date: Tue, 24 Nov 2026 09:33:01 GMT Content-Type: text/html Content-Length: 655 Connection: close CF-RAY: -",
+        "source": "Shodan, Censys"
+      },
+      {
+        "ip": "172.66.175.59",
+        "port": 2086,
+        "transport": "tcp",
+        "service": "http-simple-new (cloudflare_load_balancer)",
+        "banner": "HTTP/1.1 403 Forbidden Date: Tue, 24 Nov 2026 05:05:28 GMT Content-Type: text/plain; charset=UTF-8 Content-Length: 17 Connection: keep-alive Cache-Control: private, max-age=0, no-store, no-cache, must",
+        "source": "Shodan, Censys"
+      },
+      {
+        "ip": "172.66.175.59",
+        "port": 2087,
+        "transport": "tcp",
+        "service": "language-server-protocol (cloudflare_load_balancer)",
+        "banner": "HTTP/1.1 400 Bad Request Server: cloudflare Date: Mon, 23 Nov 2026 13:30:50 GMT Content-Type: text/html Content-Length: 155 Connection: close CF-RAY: -  <html> <head><title>400 Bad Request</title></he",
+        "source": "Shodan, Censys"
+      },
+      {
+        "ip": "172.66.175.59",
+        "port": 2095,
+        "transport": "tcp",
+        "service": "auto (cloudflare_load_balancer)",
+        "banner": "HTTP/1.1 403 Forbidden Date: Thu, 19 Nov 2026 23:55:02 GMT Content-Type: text/plain; charset=UTF-8 Content-Length: 17 Connection: keep-alive Cache-Control: private, max-age=0, no-store, no-cache, must",
+        "source": "Shodan, Censys"
+      },
+      {
+        "ip": "172.66.175.59",
+        "port": 2096,
+        "transport": "tcp",
+        "service": "auto (cloudflare_load_balancer)",
+        "banner": "HTTP/1.1 400 Bad Request Server: cloudflare Date: Tue, 17 Nov 2026 12:36:07 GMT Content-Type: text/html Content-Length: 655 Connection: close CF-RAY: -",
+        "source": "Shodan, Censys"
+      },
+      {
+        "ip": "172.66.175.59",
+        "port": 8080,
+        "transport": "tcp",
+        "service": "http-simple-new (cloudflare_load_balancer)",
+        "banner": "HTTP/1.1 403 Forbidden Date: Sat, 21 Nov 2026 02:21:37 GMT Content-Type: text/plain; charset=UTF-8 Content-Length: 17 Connection: keep-alive Cache-Control: private, max-age=0, no-store, no-cache, must",
+        "source": "Shodan, Censys"
+      },
+      {
+        "ip": "172.66.175.59",
+        "port": 8443,
+        "transport": "tcp",
+        "service": "CloudFlare",
+        "banner": "HTTP/1.1 400 Bad Request Server: cloudflare Date: Sun, 22 Nov 2026 18:03:50 GMT Content-Type: text/html Content-Length: 655 Connection: close CF-RAY: -",
+        "source": "Shodan, Censys"
+      },
+      {
+        "ip": "172.66.175.59",
+        "port": 8880,
+        "transport": "tcp",
+        "service": "https-simple-new (cloudflare_load_balancer)",
+        "banner": "HTTP/1.1 403 Forbidden Date: Thu, 19 Nov 2026 17:10:54 GMT Content-Type: text/plain; charset=UTF-8 Content-Length: 17 Connection: keep-alive Cache-Control: private, max-age=0, no-store, no-cache, must",
+        "source": "Shodan, Censys"
+      }
+    ],
+    "hosts": [
+      {
+        "ip": "104.20.21.8",
+        "org": "Cloudflare, Inc.",
+        "asn": "AS13335",
+        "country": "United States",
+        "city": "San Francisco",
+        "ports": [
+          80,
+          443,
+          2052,
+          2053,
+          2082,
+          2083,
+          2086,
+          2087,
+          2095,
+          2096,
+          8080,
+          8443,
+          8880
+        ],
+        "vulns": [],
+        "source": "Shodan, Censys"
+      },
+      {
+        "ip": "172.66.175.59",
+        "org": "Cloudflare, Inc.",
+        "asn": "AS13335",
+        "country": "United States",
+        "city": "San Francisco",
+        "ports": [
+          80,
+          443,
+          2052,
+          2053,
+          2082,
+          2083,
+          2086,
+          2087,
+          2095,
+          2096,
+          8080,
+          8443,
+          8880
+        ],
+        "vulns": [],
+        "source": "Shodan, Censys"
+      }
+    ],
+    "warnings": []
+  }
+}
