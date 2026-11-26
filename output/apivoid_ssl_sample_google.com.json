@@ -1,0 +1,81 @@
+{
+  "host": "google.com",
+  "ip": "172.217.204.100",
+  "port": 443,
+  "certificate": {
+    "found": true,
+    "debug_message": "",
+    "fingerprint_sha1": "c77c323522a551fee3d4b533dbea23af63cce381",
+    "fingerprint_sha256": "2b1e9fec6eadf7a870af643f924fbb952f8cc675a93f33926c5e9b392ec574f2",
+    "blacklisted": false,
+    "type": "Domain Validation",
+    "deprecated_issuer": false,
+    "name_match": true,
+    "expired": false,
+    "self_signed": false,
+    "revoked": false,
+    "valid": true,
+    "details": {
+      "subject": {
+        "name": "CN=*.google.com",
+        "common_name": "*.google.com",
+        "alternative_names": "*.google.com, *.admin.google.com, *.appengine.google.com, *.bdn.dev, *.origin-test.bdn.dev, *.cloud.google.com, *.crowdsource.google.com, *.datacompute.google.com, *.google.ca, *.google.cl, *.google.co.in, *.google.co.jp, *.google.co.uk, *.google.com.ar, *.google.com.au, *.google.com.br, *.google.com.co, *.google.com.mx, *.google.com.tr, *.google.com.vn, *.google.de, *.google.es, *.google.fr, *.google.hu, *.google.it, *.google.nl, *.google.pl, *.google.pt, *.gemini.cloud.google.com, *.gstatic.com, *.metric.gstatic.com, *.gvt1.com, *.gcpcdn.gvt1.com, *.gvt2.com, *.gcp.gvt2.com, *.url.google.com, *.youtube-nocookie.com, *.ytimg.com, ai.android, android.com, *.android.com, *.flash.android.com, g.co, *.g.co, goo.gl, www.goo.gl, google-analytics.com, *.google-analytics.com, google.com, googlecommerce.com, *.googlecommerce.com, urchin.com, *.urchin.com, youtu.be, youtube.com, *.youtube.com, music.youtube.com, *.music.youtube.com, youtubeeducation.com, *.youtubeeducation.com, youtubekids.com, *.youtubekids.com, yt.be, *.yt.be, android.clients.google.com, *.aistudio.google.com",
+        "organization_unit": [],
+        "organization": "",
+        "category": "",
+        "country": "",
+        "street": [],
+        "postal_code": "",
+        "state": "",
+        "location": "",
+        "serial_number": "",
+        "inc_country": "",
+        "inc_state": ""
+      },
+      "issuer": {
+        "common_name": "WE2",
+        "organization": "Google Trust Services",
+        "country": "US",
+        "state": "",
+        "location": "",
+        "organization_unit": []
+      },
+      "public_key": {
+        "algorithm": "ECDSA",
+        "size": 256
+      },
+      "crl_endpoints": [
+        "http://c.pki.goog/we2/yK5nPhtHKQs.crl"
+      ],
+      "signature": {
+        "serial": "110409371903369209009215577394010784426",
+        "serial_hex": "53101251087FFC4309F27D0B33C202AA",
+        "type": "ECDSA-SHA256"
+      },
+      "validity": {
+        "days_left": 61,
+        "expired_from_days": 0,
+        "valid_from": "Tue, 03 Nov 2026 08:26:50 UTC",
+        "valid_to": "Tue, 26 Jan 2027 08:26:49 UTC",
+        "valid_from_timestamp": 1793694410,
+        "valid_to_timestamp": 1800952009
+      },
+      "certificate_authority": false,
+      "authority_key_id": "3016801475bec477ae89f644377dcfb1681f1d1aebdc3459",
+      "subject_key_id": "0414adc6f71f4da319d8aed10957a1d717173ecd94f0",
+      "key_usages": [
+        "Digital Signature"
+      ],
+      "extended_key_usages": [
+        "Server Authentication"
+      ],
+      "authority_info": [
+        {
+          "location": "http://i.pki.goog/we2.crt",
+          "method": "CA Issuers"
+        }
+      ]
+    }
+  },
+  "elapsed_ms": 16
+}
