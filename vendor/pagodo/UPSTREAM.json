@@ -1,0 +1,9 @@
+{
+  "source": "https://github.com/opsdisk/pagodo",
+  "source_url": "https://raw.githubusercontent.com/opsdisk/pagodo/master/pagodo.py",
+  "retrieved": "2026-11-26",
+  "sha256_before_patch": "07a2586271129a7ba0c92bfb34849f51639f99d3d403e83ff028d477aacd47bc",
+  "modification": "Only import yagooglesearch replaced with from modules import google_search_client as yagooglesearch. Google transport: fixed UA, no retry/proxy/redirect, stop on errors.",
+  "sha256_after_patch": "ff405c93bbfa128401860b46e17a8147a32081ab1f862d0e78eeb1d6f358b4a9",
+  "version": "2.8.0"
+}
