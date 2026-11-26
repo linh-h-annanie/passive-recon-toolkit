@@ -1,0 +1,95 @@
+{
+  "tests": {
+    "command": "python -m unittest discover -s tests -p test_dorks_mod.py -v",
+    "exit_code": 0,
+    "stdout": "",
+    "stderr": "test_cli_demo_and_replay (test_dorks_mod.DorksTests.test_cli_demo_and_replay) ... ok\ntest_connection_error (test_dorks_mod.DorksTests.test_connection_error) ... ok\ntest_control_characters_rejected (test_dorks_mod.DorksTests.test_control_characters_rejected) ... ok\ntest_disabled_does_not_search (test_dorks_mod.DorksTests.test_disabled_does_not_search) ... ok\ntest_empty (test_dorks_mod.DorksTests.test_empty) ... ok\ntest_empty_results (test_dorks_mod.DorksTests.test_empty_results) ... ok\ntest_http_errors_stop_without_retry (test_dorks_mod.DorksTests.test_http_errors_stop_without_retry) ... ok\ntest_idna (test_dorks_mod.DorksTests.test_idna) ... ok\ntest_invalid_domain (test_dorks_mod.DorksTests.test_invalid_domain) ... ok\ntest_ip_skipped (test_dorks_mod.DorksTests.test_ip_skipped) ... ok\ntest_main_style_contract (test_dorks_mod.DorksTests.test_main_style_contract) ... ok\ntest_output_schema_and_json (test_dorks_mod.DorksTests.test_output_schema_and_json) ... ok\ntest_pagodo_does_not_hide_errors (test_dorks_mod.DorksTests.test_pagodo_does_not_hide_errors) ... ok\ntest_pagodo_restores_logger (test_dorks_mod.DorksTests.test_pagodo_restores_logger) ... ok\ntest_pagodo_system_exit_does_not_escape (test_dorks_mod.DorksTests.test_pagodo_system_exit_does_not_escape) ... ok\ntest_parser_absolute_google_redirect (test_dorks_mod.DorksTests.test_parser_absolute_google_redirect) ... ok\ntest_parser_blocked_and_unknown (test_dorks_mod.DorksTests.test_parser_blocked_and_unknown) ... ok\ntest_parser_empty (test_dorks_mod.DorksTests.test_parser_empty) ... ok\ntest_parser_ignores_broken_link (test_dorks_mod.DorksTests.test_parser_ignores_broken_link) ... ok\ntest_parser_success (test_dorks_mod.DorksTests.test_parser_success) ... ok\ntest_partial_result_on_error (test_dorks_mod.DorksTests.test_partial_result_on_error) ... ok\ntest_real_pagodo_with_mock_transport (test_dorks_mod.DorksTests.test_real_pagodo_with_mock_transport) ... ok\ntest_response_size_limit (test_dorks_mod.DorksTests.test_response_size_limit) ... ok\ntest_scope_duplicates_and_fragment (test_dorks_mod.DorksTests.test_scope_duplicates_and_fragment) ... ok\ntest_single_request_no_target_fetching (test_dorks_mod.DorksTests.test_single_request_no_target_fetching) ... ok\ntest_socket_timeout (test_dorks_mod.DorksTests.test_socket_timeout) ... ok\ntest_success_and_delay (test_dorks_mod.DorksTests.test_success_and_delay) ... ok\ntest_valid_domain_and_url (test_dorks_mod.DorksTests.test_valid_domain_and_url) ... ok\ntest_worker_deadline (test_dorks_mod.DorksTests.test_worker_deadline) ... ok\ntest_worker_failure_is_error (test_dorks_mod.DorksTests.test_worker_failure_is_error) ... ok\ntest_wrapped_socket_timeout (test_dorks_mod.DorksTests.test_wrapped_socket_timeout) ... ok\n\n----------------------------------------------------------------------\nRan 31 tests in 0.772s\n\nOK\n"
+  },
+  "demo": {
+    "command": "python -m modules.dorks_mod --target example.org --mode demo",
+    "exit_code": 0,
+    "stdout": "{\n  \"module\": \"dorks\",\n  \"status\": \"ok\",\n  \"source\": \"Google Search / Pagodo\",\n  \"data\": {\n    \"target\": \"example.org\",\n    \"backend\": \"pagodo\",\n    \"mode\": \"demo\",\n    \"queries\": [\n      {\n        \"query\": \"site:example.org filetype:pdf \\\"guide\\\"\",\n        \"status\": \"ok\",\n        \"urls\": [\n          \"https://example.org/demo-public-guide.pdf\"\n        ]\n      },\n      {\n        \"query\": \"site:example.org intitle:\\\"documentation\\\"\",\n        \"status\": \"ok\",\n        \"urls\": []\n      },\n      {\n        \"query\": \"site:example.org \\\"public documentation\\\"\",\n        \"status\": \"ok\",\n        \"urls\": []\n      }\n    ],\n    \"urls\": [\n      \"https://example.org/demo-public-guide.pdf\"\n    ],\n    \"notes\": [\n      \"DỮ LIỆU DEMO TỰ TẠO; không gọi Google, không phải bằng chứng online\"\n    ]\n  },\n  \"error\": null,\n  \"timestamp\": \"2026-11-26T08:57:07.133345+00:00\"\n}\n",
+    "stderr": ""
+  },
+  "inputs": [
+    {
+      "command": "python -m modules.dorks_mod --target 8.8.8.8",
+      "exit_code": 0,
+      "stdout": "{\n  \"module\": \"dorks\",\n  \"status\": \"skipped\",\n  \"source\": \"Google Search / Pagodo\",\n  \"data\": {},\n  \"error\": \"Google Dorks yêu cầu domain, không nhận IP\",\n  \"timestamp\": \"2026-11-26T08:57:07.431557+00:00\"\n}\n",
+      "stderr": "",
+      "target": "8.8.8.8",
+      "outcome": {
+        "module": "dorks",
+        "status": "skipped",
+        "source": "Google Search / Pagodo",
+        "data": {},
+        "error": "Google Dorks yêu cầu domain, không nhận IP",
+        "timestamp": "2026-11-26T08:57:07.431557+00:00"
+      }
+    },
+    {
+      "command": "python -m modules.dorks_mod --target \"bad domain\"",
+      "exit_code": 0,
+      "stdout": "{\n  \"module\": \"dorks\",\n  \"status\": \"error\",\n  \"source\": \"Google Search / Pagodo\",\n  \"data\": {},\n  \"error\": \"ValueError: Domain không hợp lệ\",\n  \"timestamp\": \"2026-11-26T08:57:07.707319+00:00\"\n}\n",
+      "stderr": "",
+      "target": "bad domain",
+      "outcome": {
+        "module": "dorks",
+        "status": "error",
+        "source": "Google Search / Pagodo",
+        "data": {},
+        "error": "ValueError: Domain không hợp lệ",
+        "timestamp": "2026-11-26T08:57:07.707319+00:00"
+      }
+    },
+    {
+      "command": "python -m modules.dorks_mod --target \"\"",
+      "exit_code": 0,
+      "stdout": "{\n  \"module\": \"dorks\",\n  \"status\": \"error\",\n  \"source\": \"Google Search / Pagodo\",\n  \"data\": {},\n  \"error\": \"ValueError: Domain không được rỗng\",\n  \"timestamp\": \"2026-11-26T08:57:08.011401+00:00\"\n}\n",
+      "stderr": "",
+      "target": "",
+      "outcome": {
+        "module": "dorks",
+        "status": "error",
+        "source": "Google Search / Pagodo",
+        "data": {},
+        "error": "ValueError: Domain không được rỗng",
+        "timestamp": "2026-11-26T08:57:08.011401+00:00"
+      }
+    },
+    {
+      "command": "python -m modules.dorks_mod --target example.org",
+      "exit_code": 0,
+      "stdout": "{\n  \"module\": \"dorks\",\n  \"status\": \"skipped\",\n  \"source\": \"Google Search / Pagodo\",\n  \"data\": {},\n  \"error\": \"Chưa bật tìm kiếm; chọn dorks_mode=live hoặc demo\",\n  \"timestamp\": \"2026-11-26T08:57:08.270036+00:00\"\n}\n",
+      "stderr": "",
+      "target": "example.org",
+      "outcome": {
+        "module": "dorks",
+        "status": "skipped",
+        "source": "Google Search / Pagodo",
+        "data": {},
+        "error": "Chưa bật tìm kiếm; chọn dorks_mode=live hoặc demo",
+        "timestamp": "2026-11-26T08:57:08.270036+00:00"
+      }
+    }
+  ],
+  "mock429": {
+    "command": "python -c \"import json\nfrom unittest.mock import patch\nfrom modules import dorks_mod as d, google_search_client as g\nwith patch.object(g, 'search', side_effect=g.SearchError('http_429: simulated Google rejection')):\n    r = d.collect('example.org', 'pagodo')\nr['data']['mode'] = 'mock'\nr['data']['notes'].append('MOCK HTTP 429; no Google request')\nprint(json.dumps(r, ensure_ascii=False, indent=2))\n\"",
+    "exit_code": 0,
+    "stdout": "{\n  \"module\": \"dorks\",\n  \"status\": \"error\",\n  \"source\": \"Google Search / Pagodo\",\n  \"data\": {\n    \"target\": \"example.org\",\n    \"backend\": \"pagodo\",\n    \"mode\": \"mock\",\n    \"queries\": [\n      {\n        \"query\": \"site:example.org filetype:pdf \\\"guide\\\"\",\n        \"status\": \"error\",\n        \"urls\": [],\n        \"error\": \"http_429: simulated Google rejection\"\n      }\n    ],\n    \"urls\": [],\n    \"notes\": [\n      \"Đã dừng toàn bộ truy vấn sau lỗi; dữ liệu có thể chưa đầy đủ\",\n      \"MOCK HTTP 429; no Google request\"\n    ]\n  },\n  \"error\": \"http_429: simulated Google rejection\",\n  \"timestamp\": \"2026-11-26T08:57:08.966901+00:00\"\n}\n",
+    "stderr": ""
+  },
+  "replay": {
+    "command": "python -m modules.dorks_mod --target example.org --replay \"D:\\PTIT\\Python cho ATTT\\demo\\minh_chung_huy\\demo_example_org.json\"",
+    "exit_code": 0,
+    "stdout": "{\n  \"module\": \"dorks\",\n  \"status\": \"ok\",\n  \"source\": \"Google Search / Pagodo\",\n  \"data\": {\n    \"target\": \"example.org\",\n    \"backend\": \"pagodo\",\n    \"mode\": \"demo\",\n    \"queries\": [\n      {\n        \"query\": \"site:example.org filetype:pdf \\\"guide\\\"\",\n        \"status\": \"ok\",\n        \"urls\": [\n          \"https://example.org/demo-public-guide.pdf\"\n        ]\n      },\n      {\n        \"query\": \"site:example.org intitle:\\\"documentation\\\"\",\n        \"status\": \"ok\",\n        \"urls\": []\n      },\n      {\n        \"query\": \"site:example.org \\\"public documentation\\\"\",\n        \"status\": \"ok\",\n        \"urls\": []\n      }\n    ],\n    \"urls\": [\n      \"https://example.org/demo-public-guide.pdf\"\n    ],\n    \"notes\": [\n      \"DỮ LIỆU DEMO TỰ TẠO; không gọi Google, không phải bằng chứng online\"\n    ],\n    \"replayed\": true\n  },\n  \"error\": null,\n  \"timestamp\": \"2026-11-26T08:57:07.133345+00:00\"\n}\n",
+    "stderr": ""
+  },
+  "metadata": {
+    "time_vietnam": "26/11/2026 15:57:05 UTC+7",
+    "commit": "b19af9f",
+    "repo": "D:\\PTIT\\Python cho ATTT\\passive-recon-toolkit",
+    "online_google_tested": false,
+    "main_integration_tested": false
+  }
+}

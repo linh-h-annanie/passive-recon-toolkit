@@ -1,0 +1,37 @@
+{
+  "module": "dorks",
+  "status": "ok",
+  "source": "Google Search / Pagodo",
+  "data": {
+    "target": "example.org",
+    "backend": "pagodo",
+    "mode": "demo",
+    "queries": [
+      {
+        "query": "site:example.org filetype:pdf \"guide\"",
+        "status": "ok",
+        "urls": [
+          "https://example.org/demo-public-guide.pdf"
+        ]
+      },
+      {
+        "query": "site:example.org intitle:\"documentation\"",
+        "status": "ok",
+        "urls": []
+      },
+      {
+        "query": "site:example.org \"public documentation\"",
+        "status": "ok",
+        "urls": []
+      }
+    ],
+    "urls": [
+      "https://example.org/demo-public-guide.pdf"
+    ],
+    "notes": [
+      "DỮ LIỆU DEMO TỰ TẠO; không gọi Google, không phải bằng chứng online"
+    ]
+  },
+  "error": null,
+  "timestamp": "2026-11-26T08:57:07.133345+00:00"
+}
