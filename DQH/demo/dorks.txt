@@ -1,4 +1,0 @@
-# Public documents only. Domain is added by the module.
-filetype:pdf
-filetype:docx
-filetype:pptx
