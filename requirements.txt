@@ -1,10 +1,7 @@
-# Thư viện của Chapter 2. Sau khi cả nhóm chạy ổn, chạy "pip freeze" để chốt phiên bản.
-python-whois
-pydig
-nslookup
-pycrtsh
-shodan
-censys
-ipinfo
-requests
-# Google Dorks / Google Search: Huy chốt thư viện theo sách (pagodo cài từ GitHub, xem README).
+python-whois>=0.9.5
+dnspython>=2.6.1
+requests>=2.31.0
+shodan>=1.31.0
+censys>=2.2.12
+ipinfo>=5.0.1
+googlesearch-python>=1.2.5
