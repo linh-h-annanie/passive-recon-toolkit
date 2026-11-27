@@ -1,11 +1,3 @@
-"""Run configuration and target validation for the Passive Recon Toolkit.
-
-Safety rules enforced here (not in each module):
-  * only a public domain name or a public IP address is accepted as a target;
-  * an optional allow-list (env ALLOWED_TARGETS or --allow) restricts targets further;
-  * live network use needs an explicit opt-in, demo/replay never touches the network;
-  * output file names are derived from the validated target, never from raw user input.
-"""
 import ipaddress
 import os
 import re
