@@ -1,5 +1,7 @@
 """Merge and deduplicate passive reconnaissance outputs from Shodan and Censys."""
 
+from datetime import datetime, timezone
+
 RISKY_PORTS = {
     21: "FTP",
     22: "SSH",
@@ -134,3 +136,53 @@ def merge_shodan_censys(shodan_result, censys_result):
         "hosts": merged_hosts,
         "warnings": warnings,
     }
+
+
+def merge_all(target, results):
+    """Gộp kết quả của mọi module (mỗi module trả về dict theo 'hợp đồng' chung)."""
+    merged = {
+        "target": target,
+        "generated_at": datetime.now(timezone.utc).isoformat(),
+        "summary": {"ok": [], "skipped": [], "error": []},
+        "modules": {},   # dữ liệu gốc của từng module
+        "network": {},   # Shodan + Censys đã gộp, loại trùng
+        "warnings": [],
+    }
+
+    by_module = {}
+    for res in results:
+        if not isinstance(res, dict):
+            continue
+        name = str(res.get("module") or "unknown").lower()
+        status = res.get("status")
+        by_module[name] = res
+
+        if status == "ok":
+            merged["summary"]["ok"].append(name)
+            merged["modules"][name] = res.get("data") or {}
+        elif status == "skipped":
+            merged["summary"]["skipped"].append({"module": name, "reason": res.get("error")})
+        else:
+            partial = bool(res.get("data"))
+            merged["summary"]["error"].append(
+                {"module": name, "reason": res.get("error"), "partial_data": partial}
+            )
+            if partial:  # giữ lại dữ liệu một phần (ví dụ dorks bị Google chặn giữa chừng)
+                merged["modules"][name] = res["data"]
+
+    network = merge_shodan_censys(by_module.get("shodan"), by_module.get("censys"))
+    merged["network"] = network
+    merged["warnings"].extend(network["warnings"])
+
+    days = (merged["modules"].get("whois") or {}).get("days_to_expiry")
+    if days is not None and days < 30:
+        merged["warnings"].append(f"Domain expires in {days} day(s)")
+
+    expiring = (merged["modules"].get("crtsh") or {}).get("expiring_within_30_days") or []
+    if expiring:
+        merged["warnings"].append(f"{len(expiring)} certificate(s) expire within 30 days")
+
+    if (merged["modules"].get("dorks") or {}).get("mode") == "demo":
+        merged["warnings"].append("Dorks data is DEMO (synthetic), not real search results")
+
+    return merged
