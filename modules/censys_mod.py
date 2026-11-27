@@ -1,7 +1,7 @@
-"""Passive host and service lookup through Censys."""
 import os
 from datetime import datetime, timezone
 
+from modules.common import classify_exception, redact
 from modules.shodan_mod import load_env_key, resolve_targets
 
 MAX_BANNER_LEN = 200
@@ -22,7 +22,7 @@ def _fetch_censys_v3(token, ip, org_id="", timeout=(5, 15)):
     }
     if org_id:
         headers["X-Organization-ID"] = org_id
-    resp = requests.get(CENSYS_V3_HOST_URL.format(ip=ip), headers=headers, timeout=timeout)
+    resp = requests.get(CENSYS_V3_HOST_URL.format(ip=ip), headers=headers, timeout=timeout, allow_redirects=False)
     resp.raise_for_status()
     payload = resp.json()
     return (payload.get("result") or {}).get("resource") or payload.get("result") or payload
@@ -39,6 +39,7 @@ def _fetch_censys_v2(api_id, api_secret, ip, timeout=(5, 15)):
         auth=(api_id, api_secret),
         headers=headers,
         timeout=timeout,
+        allow_redirects=False,
     )
     resp.raise_for_status()
     payload = resp.json()
@@ -125,7 +126,7 @@ def run(target, config=None):
     cfg = config if isinstance(config, dict) else {}
     timeout = cfg.get("censys_timeout", (5, 15))
 
-    hosts, all_services, errors = [], [], []
+    hosts, all_services, errors, reasons = [], [], [], []
     for ip in ips:
         try:
             if token:
@@ -136,10 +137,11 @@ def run(target, config=None):
             hosts.append(host_info)
             all_services.extend(services)
         except Exception as exc:
-            errors.append(f"{ip}: {type(exc).__name__}: {exc}")
+            errors.append(redact(f"{ip}: {type(exc).__name__}: {exc}", token, api_id, api_secret))
+            reasons.append(classify_exception(exc))
 
     if not hosts and errors:
-        return result("error", error="; ".join(errors))
+        return result("error", {"reason": reasons[0] if reasons else "error"}, "; ".join(errors))
 
     data = {
         "ips_queried": ips,
