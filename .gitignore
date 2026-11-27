@@ -1,2 +1,6 @@
 .env
 22-11_APIkey.txt
+__pycache__/
+*.pyc
+venv/
+output/runs/
