@@ -1,59 +1,48 @@
-import os
-import json
-import ipinfo
-from dotenv import load_dotenv
+from modules.common import classify_exception, clean_ip, load_env_key, make_result, redact
 
-load_dotenv()
+SOURCE = "IPinfo"
+FIELDS = ("ip", "hostname", "city", "region", "country", "loc", "org", "postal", "timezone")
+USEFUL = ("city", "region", "country", "loc", "org")
 
-def run(target: str, timeout: int = 10) -> dict:
-    """
-    Module thu thập thông tin GeoIP và ASN từ IPinfo.
-    :param target: Địa chỉ IPv4/IPv6 mục tiêu (ví dụ: '8.8.8.8')
-    :param timeout: Thời gian tối đa chờ kết nối mạng (giây)
-    :return: dict chuẩn hóa theo quy ước chung của nhóm
-    """
-    result = {
-        "module": "ipinfo",
-        "status": "ok",
-        "source": "ipinfo.io",
-        "data": {},
-        "error": None
-    }
 
-    token = os.getenv("IPINFO_TOKEN")
+def result(status, data=None, error=None, reason=None):
+    return make_result("ipinfo", SOURCE, status, data, error, reason)
+
+
+def run(target, config=None):
+    cfg = config if isinstance(config, dict) else {}
+    token = load_env_key("IPINFO_TOKEN", cfg)
     if not token:
-        result["status"] = "skipped"
-        result["error"] = "Thieu IPINFO_TOKEN trong file .env"
-        return result
+        return result("skipped", error="Missing IPINFO_TOKEN", reason="no_key")
 
+    ip, problem = clean_ip(target)
+    if problem == "needs_ip":
+        return result("skipped", error="IPinfo module needs an IP address; pass an IP, e.g. from the dns module", reason=problem)
+    if problem == "non_public_ip":
+        return result("skipped", error="Private, loopback or reserved IP: public targets only", reason=problem)
+    if problem:
+        return result("error", error="Invalid target: expected a public IP address", reason=problem)
+
+    timeout = cfg.get("ipinfo_timeout", 10)
+    if not isinstance(timeout, (int, float)) or isinstance(timeout, bool) or not 0 < timeout <= 60:
+        timeout = 10
     try:
+        import ipinfo
         handler = ipinfo.getHandler(token, request_options={"timeout": timeout})
-        details = handler.getDetails(target)
-        raw = details.all
+        raw = dict(handler.getDetails(ip).all)
+    except ImportError:
+        return result("error", error="Library 'ipinfo' is not installed (pip install -r requirements.txt)", reason="dependency_missing")
+    except Exception as exc:
+        return result("error", error=redact(f"{type(exc).__name__}: {exc}", token)[:300], reason=classify_exception(exc))
 
-        result["data"] = {
-            "ip": raw.get("ip", target),
-            "hostname": raw.get("hostname"),
-            "city": raw.get("city"),
-            "region": raw.get("region"),
-            "country": raw.get("country"),
-            "loc": raw.get("loc"),         
-            "org": raw.get("org"),         
-            "postal": raw.get("postal"),
-            "timezone": raw.get("timezone")
-        }
-    except Exception as e:
-        result["status"] = "error"
-        result["error"] = str(e)
-
-    return result
-
+    data = {name: raw.get(name) for name in FIELDS}
+    if not any(data.get(name) for name in USEFUL):
+        return result("ok", {"ip": ip}, reason="empty")
+    data["ip"] = data.get("ip") or ip
+    return result("ok", data, reason="success")
 
 
 if __name__ == "__main__":
+    import json
     import sys
-
-    target_ip = sys.argv[1] if len(sys.argv) > 1 else "8.8.8.8"
-    
-    res = run(target_ip)
-    print(json.dumps(res, indent=2, ensure_ascii=False))
+    print(json.dumps(run(sys.argv[1] if len(sys.argv) > 1 else "8.8.8.8"), indent=2, ensure_ascii=False))
