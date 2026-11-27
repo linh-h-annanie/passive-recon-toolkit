@@ -1,4 +1,3 @@
-"""Passive host and service lookup through Shodan."""
 import ipaddress
 import os
 import re
@@ -6,6 +5,8 @@ import socket
 from concurrent.futures import ThreadPoolExecutor
 from datetime import datetime, timezone
 from pathlib import Path
+
+from modules.common import classify_exception, redact
 
 MAX_IPS = 5
 MAX_BANNER_LEN = 200
@@ -159,7 +160,7 @@ def run(target, config=None):
     cfg = config if isinstance(config, dict) else {}
     timeout = cfg.get("shodan_timeout", 10)
 
-    hosts, all_services, errors = [], [], []
+    hosts, all_services, errors, reasons = [], [], [], []
     for ip in ips:
         try:
             raw = _fetch_shodan_host(api_key, ip, timeout=timeout)
@@ -171,10 +172,11 @@ def run(target, config=None):
             if "No information available for that IP" in err_msg:
                 notes.append(f"{ip}: No Shodan record found")
             else:
-                errors.append(f"{ip}: {type(exc).__name__}: {err_msg}")
+                errors.append(redact(f"{ip}: {type(exc).__name__}: {err_msg}", api_key))
+                reasons.append(classify_exception(exc))
 
     if not hosts and errors:
-        return result("error", error="; ".join(errors))
+        return result("error", {"reason": reasons[0] if reasons else "error"}, "; ".join(errors))
 
     data = {
         "ips_queried": ips,
