@@ -18,7 +18,7 @@ DEMO_DIR = ROOT / "demo_data" / "recorded_runs"
 # Execution order; dorks is last because it is slow (10-15 s pause between queries).
 # Modules are imported lazily so that one missing third-party library only skips that module.
 MODULE_NAMES = ("whois", "dns", "crtsh", "shodan", "censys", "ipinfo", "apivoid", "dorks")
-IP_ONLY = {"ipinfo"}  # modules that accept an IP only, not a domain
+IP_ONLY = {"ipinfo", "apivoid"}  # modules that accept an IP only, not a domain
 CONTRACT = {"module", "status", "source", "data", "error", "timestamp"}
 
 

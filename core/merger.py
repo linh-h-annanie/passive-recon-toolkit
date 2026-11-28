@@ -138,11 +138,12 @@ def merge_shodan_censys(shodan_result, censys_result):
     }
 
 
-def merge_all(target, results):
+def merge_all(target, results, mode="live", observed_at=None):
     """Gộp kết quả của mọi module (mỗi module trả về dict theo 'hợp đồng' chung)."""
     merged = {
         "target": target,
-        "generated_at": datetime.now(timezone.utc).isoformat(),
+        "mode": mode,
+        "generated_at": observed_at or datetime.now(timezone.utc).isoformat(),
         "summary": {"ok": [], "skipped": [], "error": []},
         "modules": {},   # dữ liệu gốc của từng module
         "network": {},   # Shodan + Censys đã gộp, loại trùng

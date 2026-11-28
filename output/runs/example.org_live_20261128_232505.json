@@ -1,0 +1,1205 @@
+{
+  "target": "example.org",
+  "mode": "live",
+  "generated_at": "2026-11-28T16:25:05.931091+00:00",
+  "summary": {
+    "ok": [
+      "whois",
+      "dns",
+      "crtsh",
+      "censys",
+      "ipinfo",
+      "apivoid",
+      "dorks"
+    ],
+    "skipped": [],
+    "error": [
+      {
+        "module": "shodan",
+        "reason": "104.20.26.136: APIError: Access denied (403 Forbidden); 172.66.157.237: APIError: Access denied (403 Forbidden)",
+        "partial_data": true
+      }
+    ]
+  },
+  "modules": {
+    "whois": {
+      "domain_name": [
+        "example.org"
+      ],
+      "registrar": "ICANN",
+      "creation_date": "1995-08-31T04:00:00+00:00",
+      "expiration_date": "2027-08-30T04:00:00+00:00",
+      "days_to_expiry": 274,
+      "name_servers": [
+        "katelyn.ns.cloudflare.com",
+        "mitch.ns.cloudflare.com"
+      ],
+      "status": [
+        "serverdeleteprohibited",
+        "servertransferprohibited",
+        "serverupdateprohibited"
+      ],
+      "dnssec": "signedDelegation",
+      "org": null,
+      "country": null,
+      "emails_masked": [
+        "c***@pir.org"
+      ]
+    },
+    "dns": {
+      "records": {
+        "A": [
+          "172.66.157.237",
+          "104.20.26.136"
+        ],
+        "AAAA": [
+          "2606:4700:10::ac42:9ded",
+          "2606:4700:10::6814:1a88"
+        ],
+        "NS": [
+          "mitch.ns.cloudflare.com.",
+          "katelyn.ns.cloudflare.com."
+        ],
+        "MX": [
+          "0 ."
+        ],
+        "TXT": [
+          "v=spf1 -all",
+          "_uyh0vgv5ukyofwj3ddwspnni01vmlyy"
+        ],
+        "CNAME": [],
+        "SOA": [
+          "katelyn.ns.cloudflare.com. dns.cloudflare.com. 2421048052 10000 2400 604800 1800"
+        ]
+      },
+      "ips": [
+        "172.66.157.237",
+        "104.20.26.136"
+      ],
+      "reverse": {
+        "172.66.157.237": null,
+        "104.20.26.136": null
+      },
+      "notes": []
+    },
+    "crtsh": {
+      "subdomains": [
+        "www.example.org",
+        "www.testdomain.example.org"
+      ],
+      "certificates": [
+        {
+          "id": 29653203136,
+          "names": [
+            "example.org"
+          ],
+          "not_before": "2026-09-26T22:05:05+00:00",
+          "not_after": "2026-12-25T22:13:27+00:00",
+          "issuer": "C=US, O=SSL Corporation, CN=Cloudflare TLS Issuing ECC CA 3",
+          "expired": false,
+          "days_left": 27
+        },
+        {
+          "id": 29597863421,
+          "names": [
+            "example.org"
+          ],
+          "not_before": "2026-09-26T21:48:22+00:00",
+          "not_after": "2026-12-25T21:56:44+00:00",
+          "issuer": "C=US, O=SSL Corporation, CN=Cloudflare TLS Issuing ECC CA 3",
+          "expired": false,
+          "days_left": 27
+        },
+        {
+          "id": 22853391369,
+          "names": [
+            "example.org",
+            "www.example.org"
+          ],
+          "not_before": "2025-12-02T00:00:00+00:00",
+          "not_after": "2026-12-02T23:59:59+00:00",
+          "issuer": "C=GB, O=Sectigo Limited, CN=Sectigo Public Server Authentication CA OV R36",
+          "expired": false,
+          "days_left": 4
+        },
+        {
+          "id": 22648264889,
+          "names": [
+            "example.org",
+            "www.example.org"
+          ],
+          "not_before": "2025-11-21T00:00:00+00:00",
+          "not_after": "2026-11-21T23:59:59+00:00",
+          "issuer": "C=GB, O=Sectigo Limited, CN=Sectigo Public Server Authentication CA OV R36",
+          "expired": true,
+          "days_left": -7
+        },
+        {
+          "id": 22625564176,
+          "names": [
+            "example.org"
+          ],
+          "not_before": "2025-11-20T00:00:00+00:00",
+          "not_after": "2026-11-20T23:59:59+00:00",
+          "issuer": "C=GB, O=Sectigo Limited, CN=Sectigo Public Server Authentication CA OV R36",
+          "expired": true,
+          "days_left": -8
+        },
+        {
+          "id": 28361105002,
+          "names": [
+            "example.org"
+          ],
+          "not_before": "2026-07-29T21:22:47+00:00",
+          "not_after": "2026-10-27T21:29:51+00:00",
+          "issuer": "C=US, O=SSL Corporation, CN=Cloudflare TLS Issuing ECC CA 3",
+          "expired": true,
+          "days_left": -32
+        },
+        {
+          "id": 28361106104,
+          "names": [
+            "example.org"
+          ],
+          "not_before": "2026-07-29T21:22:40+00:00",
+          "not_after": "2026-10-27T21:29:51+00:00",
+          "issuer": "C=US, O=SSL Corporation, CN=Cloudflare TLS Issuing RSA CA 3",
+          "expired": true,
+          "days_left": -32
+        },
+        {
+          "id": 26786537377,
+          "names": [
+            "example.org"
+          ],
+          "not_before": "2026-05-31T21:06:34+00:00",
+          "not_after": "2026-08-29T21:14:09+00:00",
+          "issuer": "C=US, O=SSL Corporation, CN=Cloudflare TLS Issuing ECC CA 3",
+          "expired": true,
+          "days_left": -91
+        },
+        {
+          "id": 26786768481,
+          "names": [
+            "example.org"
+          ],
+          "not_before": "2026-05-31T21:06:25+00:00",
+          "not_after": "2026-08-29T21:14:08+00:00",
+          "issuer": "C=US, O=SSL Corporation, CN=Cloudflare TLS Issuing RSA CA 3",
+          "expired": true,
+          "days_left": -91
+        },
+        {
+          "id": 25327550492,
+          "names": [
+            "example.org"
+          ],
+          "not_before": "2026-04-02T22:18:16+00:00",
+          "not_after": "2026-07-01T21:52:54+00:00",
+          "issuer": "C=US, O=\"CLOUDFLARE, INC.\", CN=Cloudflare TLS Issuing ECC CA 1",
+          "expired": true,
+          "days_left": -150
+        },
+        {
+          "id": 25405864250,
+          "names": [
+            "example.org"
+          ],
+          "not_before": "2026-04-02T21:05:18+00:00",
+          "not_after": "2026-07-01T20:59:55+00:00",
+          "issuer": "C=US, O=\"CLOUDFLARE, INC.\", CN=Cloudflare TLS Issuing RSA CA 1",
+          "expired": true,
+          "days_left": -150
+        },
+        {
+          "id": 25369347805,
+          "names": [
+            "example.org"
+          ],
+          "not_before": "2026-04-02T20:25:18+00:00",
+          "not_after": "2026-07-01T20:14:34+00:00",
+          "issuer": "C=US, O=\"CLOUDFLARE, INC.\", CN=Cloudflare TLS Issuing ECC CA 1",
+          "expired": true,
+          "days_left": -150
+        },
+        {
+          "id": 25368675596,
+          "names": [
+            "example.org"
+          ],
+          "not_before": "2026-04-02T20:12:42+00:00",
+          "not_after": "2026-07-01T20:14:29+00:00",
+          "issuer": "C=US, O=\"CLOUDFLARE, INC.\", CN=Cloudflare TLS Issuing RSA CA 1",
+          "expired": true,
+          "days_left": -150
+        },
+        {
+          "id": 24249789958,
+          "names": [
+            "example.org"
+          ],
+          "not_before": "2026-02-07T20:20:28+00:00",
+          "not_after": "2026-05-08T20:26:51+00:00",
+          "issuer": "C=US, O=SSL Corporation, CN=Cloudflare TLS Issuing ECC CA 3",
+          "expired": true,
+          "days_left": -204
+        },
+        {
+          "id": 24249777576,
+          "names": [
+            "example.org"
+          ],
+          "not_before": "2026-02-07T20:19:06+00:00",
+          "not_after": "2026-05-08T20:26:49+00:00",
+          "issuer": "C=US, O=SSL Corporation, CN=Cloudflare TLS Issuing RSA CA 3",
+          "expired": true,
+          "days_left": -204
+        },
+        {
+          "id": 16593701385,
+          "names": [
+            "example.org"
+          ],
+          "not_before": "2025-02-07T00:00:00+00:00",
+          "not_after": "2026-03-10T23:59:59+00:00",
+          "issuer": "C=GB, ST=Greater Manchester, L=Salford, O=Sectigo Limited, CN=Sectigo ECC Organization Validation Secure Server CA",
+          "expired": true,
+          "days_left": -263
+        },
+        {
+          "id": 23040068109,
+          "names": [
+            "example.org"
+          ],
+          "not_before": "2025-12-10T20:01:57+00:00",
+          "not_after": "2026-03-10T20:06:47+00:00",
+          "issuer": "C=US, O=SSL Corporation, CN=Cloudflare TLS Issuing ECC CA 3",
+          "expired": true,
+          "days_left": -263
+        },
+        {
+          "id": 23040026728,
+          "names": [
+            "example.org"
+          ],
+          "not_before": "2025-12-10T19:59:08+00:00",
+          "not_after": "2026-03-10T20:06:46+00:00",
+          "issuer": "C=US, O=SSL Corporation, CN=Cloudflare TLS Issuing RSA CA 3",
+          "expired": true,
+          "days_left": -263
+        },
+        {
+          "id": 16233306772,
+          "names": [
+            "example.org",
+            "www.example.org"
+          ],
+          "not_before": "2025-01-14T00:00:00+00:00",
+          "not_after": "2026-02-14T23:59:59+00:00",
+          "issuer": "C=US, O=DigiCert Inc, CN=DigiCert Global G2 TLS RSA SHA256 2020 CA1",
+          "expired": true,
+          "days_left": -287
+        },
+        {
+          "id": 19515382447,
+          "names": [
+            "example.org"
+          ],
+          "not_before": "2025-01-15T00:00:00+00:00",
+          "not_after": "2026-01-15T23:59:59+00:00",
+          "issuer": "C=US, O=DigiCert Inc, CN=DigiCert Global G3 TLS ECC SHA384 2020 CA1",
+          "expired": true,
+          "days_left": -317
+        },
+        {
+          "id": 16488426677,
+          "names": [
+            "example.org",
+            "www.example.org"
+          ],
+          "not_before": "2025-01-27T00:00:00+00:00",
+          "not_after": "2025-04-28T23:59:59+00:00",
+          "issuer": "C=GB, ST=Greater Manchester, L=Salford, O=Sectigo Limited, CN=Sectigo RSA Domain Validation Secure Server CA",
+          "expired": true,
+          "days_left": -579
+        },
+        {
+          "id": 11920382870,
+          "names": [
+            "example.org",
+            "www.example.org"
+          ],
+          "not_before": "2024-01-30T00:00:00+00:00",
+          "not_after": "2025-03-01T23:59:59+00:00",
+          "issuer": "C=US, O=DigiCert Inc, CN=DigiCert Global G2 TLS RSA SHA256 2020 CA1",
+          "expired": true,
+          "days_left": -637
+        },
+        {
+          "id": 8913351873,
+          "names": [
+            "example.org",
+            "www.example.org"
+          ],
+          "not_before": "2023-01-13T00:00:00+00:00",
+          "not_after": "2024-02-13T23:59:59+00:00",
+          "issuer": "C=US, O=DigiCert Inc, CN=DigiCert TLS RSA SHA256 2020 CA1",
+          "expired": true,
+          "days_left": -1019
+        },
+        {
+          "id": 6359075900,
+          "names": [
+            "example.org",
+            "www.example.org"
+          ],
+          "not_before": "2022-03-14T00:00:00+00:00",
+          "not_after": "2023-03-14T23:59:59+00:00",
+          "issuer": "C=US, O=DigiCert Inc, CN=DigiCert TLS RSA SHA256 2020 CA1",
+          "expired": true,
+          "days_left": -1355
+        },
+        {
+          "id": 5813209289,
+          "names": [
+            "example.org",
+            "www.example.org"
+          ],
+          "not_before": "2021-12-10T00:00:00+00:00",
+          "not_after": "2022-12-09T23:59:59+00:00",
+          "issuer": "C=US, O=DigiCert Inc, CN=DigiCert TLS RSA SHA256 2020 CA1",
+          "expired": true,
+          "days_left": -1450
+        },
+        {
+          "id": 3704614715,
+          "names": [
+            "example.org",
+            "www.example.org"
+          ],
+          "not_before": "2020-11-24T00:00:00+00:00",
+          "not_after": "2021-12-25T23:59:59+00:00",
+          "issuer": "C=US, O=DigiCert Inc, CN=DigiCert TLS RSA SHA256 2020 CA1",
+          "expired": true,
+          "days_left": -1799
+        },
+        {
+          "id": 984858191,
+          "names": [
+            "example.org",
+            "www.example.org"
+          ],
+          "not_before": "2018-11-28T00:00:00+00:00",
+          "not_after": "2020-12-02T12:00:00+00:00",
+          "issuer": "C=US, O=DigiCert Inc, CN=DigiCert SHA2 Secure Server CA",
+          "expired": true,
+          "days_left": -2188
+        },
+        {
+          "id": 10557607,
+          "names": [
+            "example.org",
+            "www.example.org"
+          ],
+          "not_before": "2015-11-03T00:00:00+00:00",
+          "not_after": "2018-11-28T12:00:00+00:00",
+          "issuer": "C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert SHA2 High Assurance Server CA",
+          "expired": true,
+          "days_left": -2923
+        },
+        {
+          "id": 2380565475,
+          "names": [
+            "www.testdomain.example.org"
+          ],
+          "not_before": "2011-01-11T07:26:09+00:00",
+          "not_after": "2016-01-10T07:26:09+00:00",
+          "issuer": "C=DE, O=Humboldt-Universitaet zu Berlin, CN=HU-CA, emailAddress=pki@hu-berlin.de",
+          "expired": true,
+          "days_left": -3976
+        },
+        {
+          "id": 5857507,
+          "names": [
+            "example.org",
+            "www.example.org"
+          ],
+          "not_before": "2014-11-06T00:00:00+00:00",
+          "not_after": "2015-11-13T12:00:00+00:00",
+          "issuer": "C=US, O=DigiCert Inc, OU=www.digicert.com, CN=DigiCert SHA2 High Assurance Server CA",
+          "expired": true,
+          "days_left": -4034
+        }
+      ],
+      "total_certificates": 30,
+      "valid_certificates": 3,
+      "expired_certificates": 27,
+      "duplicates_removed": 26,
+      "expiring_within_30_days": [
+        {
+          "id": 29653203136,
+          "names": [
+            "example.org"
+          ],
+          "not_before": "2026-09-26T22:05:05+00:00",
+          "not_after": "2026-12-25T22:13:27+00:00",
+          "issuer": "C=US, O=SSL Corporation, CN=Cloudflare TLS Issuing ECC CA 3",
+          "expired": false,
+          "days_left": 27
+        },
+        {
+          "id": 29597863421,
+          "names": [
+            "example.org"
+          ],
+          "not_before": "2026-09-26T21:48:22+00:00",
+          "not_after": "2026-12-25T21:56:44+00:00",
+          "issuer": "C=US, O=SSL Corporation, CN=Cloudflare TLS Issuing ECC CA 3",
+          "expired": false,
+          "days_left": 27
+        },
+        {
+          "id": 22853391369,
+          "names": [
+            "example.org",
+            "www.example.org"
+          ],
+          "not_before": "2025-12-02T00:00:00+00:00",
+          "not_after": "2026-12-02T23:59:59+00:00",
+          "issuer": "C=GB, O=Sectigo Limited, CN=Sectigo Public Server Authentication CA OV R36",
+          "expired": false,
+          "days_left": 4
+        }
+      ],
+      "notes": [
+        "2 rows ignored: no name inside example.org"
+      ]
+    },
+    "shodan": {
+      "reason": "error"
+    },
+    "censys": {
+      "ips_queried": [
+        "104.20.26.136",
+        "172.66.157.237"
+      ],
+      "hosts": [
+        {
+          "ip": "104.20.26.136",
+          "org": "CLOUDFLARENET - Cloudflare, Inc.",
+          "isp": "CLOUDFLARENET - Cloudflare, Inc.",
+          "asn": "AS13335",
+          "country": "United States",
+          "city": "San Francisco",
+          "os": null,
+          "hostnames": [
+            "abetterplacetoplay.com",
+            "adyen-accounting.shoptetpay.com",
+            "api.shoptetpay.com",
+            "archive.errexe.xyz",
+            "auth.shoptetpay.com",
+            "be.shoptetpay.com",
+            "capital.shoptetpay.com",
+            "cms.shoptetpay.com",
+            "connect.shoptetpay.com",
+            "crm-debug.shoptetpay.com",
+            "crm.shoptetpay.com",
+            "dilorenzo.ca",
+            "els.shoptetpay.com",
+            "entity-service.shoptetpay.com",
+            "example.org",
+            "generationp.themoscowtimes.com",
+            "grpc-auth.shoptetpay.com",
+            "grpc-els.shoptetpay.com",
+            "xn--iloud-yra.com",
+            "xn--ilod-0oa6j.com",
+            "payment.shoptetpay.com",
+            "paypal-stmts.shoptetpay.com",
+            "ru.themoscowtimes.com",
+            "static.themoscowtimes.com",
+            "test-geolocation.pt.havenservicing.com",
+            "themoscowtimes.com",
+            "unleash-proxy.shoptetpay.com",
+            "v1foe-g9lqw.com",
+            "www.abetterplacetoplay.com",
+            "www.dilorenzo.ca",
+            "www.example.org",
+            "www.helpstonandettonvillagehall.co.uk",
+            "www.praxis-boehner.de",
+            "www.themoscowtimes.com",
+            "yanrenyu.com",
+            "zett.to"
+          ],
+          "ports": [
+            80,
+            443,
+            2052,
+            2053,
+            2082,
+            2083,
+            2086,
+            2087,
+            2095,
+            2096,
+            8080,
+            8443,
+            8880
+          ],
+          "vulns": []
+        },
+        {
+          "ip": "172.66.157.237",
+          "org": "CLOUDFLARENET - Cloudflare, Inc.",
+          "isp": "CLOUDFLARENET - Cloudflare, Inc.",
+          "asn": "AS13335",
+          "country": "United States",
+          "city": "San Francisco",
+          "os": null,
+          "hostnames": [
+            "abetterplacetoplay.com",
+            "adyen-accounting.shoptetpay.com",
+            "api.shoptetpay.com",
+            "archive.errexe.xyz",
+            "auth.shoptetpay.com",
+            "be.shoptetpay.com",
+            "capital.shoptetpay.com",
+            "cms.shoptetpay.com",
+            "connect.shoptetpay.com",
+            "crm-debug.shoptetpay.com",
+            "crm.shoptetpay.com",
+            "dilorenzo.ca",
+            "els.shoptetpay.com",
+            "entity-service.shoptetpay.com",
+            "example.org",
+            "generationp.themoscowtimes.com",
+            "grpc-auth.shoptetpay.com",
+            "grpc-els.shoptetpay.com",
+            "xn--iloud-yra.com",
+            "xn--ilod-0oa6j.com",
+            "payment.shoptetpay.com",
+            "paypal-stmts.shoptetpay.com",
+            "ru.themoscowtimes.com",
+            "static.themoscowtimes.com",
+            "test-geolocation.pt.havenservicing.com",
+            "themoscowtimes.com",
+            "unleash-proxy.shoptetpay.com",
+            "v1foe-g9lqw.com",
+            "www.abetterplacetoplay.com",
+            "www.dilorenzo.ca",
+            "www.example.org",
+            "www.helpstonandettonvillagehall.co.uk",
+            "www.praxis-boehner.de",
+            "www.themoscowtimes.com",
+            "yanrenyu.com",
+            "zett.to"
+          ],
+          "ports": [
+            80,
+            443,
+            2052,
+            2053,
+            2082,
+            2083,
+            2086,
+            2087,
+            2095,
+            2096,
+            8080,
+            8443,
+            8880
+          ],
+          "vulns": []
+        }
+      ],
+      "services": [
+        {
+          "ip": "104.20.26.136",
+          "port": 80,
+          "transport": "tcp",
+          "service": "HTTP",
+          "product": "cloudflare_load_balancer",
+          "version": null,
+          "banner": "",
+          "source": "Censys"
+        },
+        {
+          "ip": "104.20.26.136",
+          "port": 443,
+          "transport": "tcp",
+          "service": "HTTP",
+          "product": "cloudflare_load_balancer",
+          "version": null,
+          "banner": "",
+          "source": "Censys"
+        },
+        {
+          "ip": "104.20.26.136",
+          "port": 2052,
+          "transport": "tcp",
+          "service": "HTTP",
+          "product": "cloudflare_load_balancer",
+          "version": null,
+          "banner": "",
+          "source": "Censys"
+        },
+        {
+          "ip": "104.20.26.136",
+          "port": 2053,
+          "transport": "tcp",
+          "service": "HTTP",
+          "product": "cloudflare_load_balancer",
+          "version": null,
+          "banner": "",
+          "source": "Censys"
+        },
+        {
+          "ip": "104.20.26.136",
+          "port": 2082,
+          "transport": "tcp",
+          "service": "HTTP",
+          "product": "cloudflare_load_balancer",
+          "version": null,
+          "banner": "",
+          "source": "Censys"
+        },
+        {
+          "ip": "104.20.26.136",
+          "port": 2083,
+          "transport": "tcp",
+          "service": "HTTP",
+          "product": "cloudflare_load_balancer",
+          "version": null,
+          "banner": "",
+          "source": "Censys"
+        },
+        {
+          "ip": "104.20.26.136",
+          "port": 2086,
+          "transport": "tcp",
+          "service": "HTTP",
+          "product": "cloudflare_load_balancer",
+          "version": null,
+          "banner": "",
+          "source": "Censys"
+        },
+        {
+          "ip": "104.20.26.136",
+          "port": 2087,
+          "transport": "tcp",
+          "service": "HTTP",
+          "product": "cloudflare_load_balancer",
+          "version": null,
+          "banner": "",
+          "source": "Censys"
+        },
+        {
+          "ip": "104.20.26.136",
+          "port": 2095,
+          "transport": "tcp",
+          "service": "HTTP",
+          "product": "cloudflare_load_balancer",
+          "version": null,
+          "banner": "",
+          "source": "Censys"
+        },
+        {
+          "ip": "104.20.26.136",
+          "port": 2096,
+          "transport": "tcp",
+          "service": "HTTP",
+          "product": "cloudflare_load_balancer",
+          "version": null,
+          "banner": "",
+          "source": "Censys"
+        },
+        {
+          "ip": "104.20.26.136",
+          "port": 8080,
+          "transport": "tcp",
+          "service": "HTTP",
+          "product": "cloudflare_load_balancer",
+          "version": null,
+          "banner": "",
+          "source": "Censys"
+        },
+        {
+          "ip": "104.20.26.136",
+          "port": 8443,
+          "transport": "tcp",
+          "service": "HTTP",
+          "product": "cloudflare_load_balancer",
+          "version": null,
+          "banner": "",
+          "source": "Censys"
+        },
+        {
+          "ip": "104.20.26.136",
+          "port": 8880,
+          "transport": "tcp",
+          "service": "HTTP",
+          "product": "cloudflare_load_balancer",
+          "version": null,
+          "banner": "",
+          "source": "Censys"
+        },
+        {
+          "ip": "172.66.157.237",
+          "port": 80,
+          "transport": "tcp",
+          "service": "HTTP",
+          "product": "cloudflare_load_balancer",
+          "version": null,
+          "banner": "",
+          "source": "Censys"
+        },
+        {
+          "ip": "172.66.157.237",
+          "port": 443,
+          "transport": "tcp",
+          "service": "HTTP",
+          "product": "cloudflare_load_balancer",
+          "version": null,
+          "banner": "",
+          "source": "Censys"
+        },
+        {
+          "ip": "172.66.157.237",
+          "port": 2052,
+          "transport": "tcp",
+          "service": "HTTP",
+          "product": "cloudflare_load_balancer",
+          "version": null,
+          "banner": "",
+          "source": "Censys"
+        },
+        {
+          "ip": "172.66.157.237",
+          "port": 2053,
+          "transport": "tcp",
+          "service": "HTTP",
+          "product": "cloudflare_load_balancer",
+          "version": null,
+          "banner": "",
+          "source": "Censys"
+        },
+        {
+          "ip": "172.66.157.237",
+          "port": 2082,
+          "transport": "tcp",
+          "service": "HTTP",
+          "product": "cloudflare_load_balancer",
+          "version": null,
+          "banner": "",
+          "source": "Censys"
+        },
+        {
+          "ip": "172.66.157.237",
+          "port": 2083,
+          "transport": "tcp",
+          "service": "HTTP",
+          "product": "cloudflare_load_balancer",
+          "version": null,
+          "banner": "",
+          "source": "Censys"
+        },
+        {
+          "ip": "172.66.157.237",
+          "port": 2086,
+          "transport": "tcp",
+          "service": "HTTP",
+          "product": "cloudflare_load_balancer",
+          "version": null,
+          "banner": "",
+          "source": "Censys"
+        },
+        {
+          "ip": "172.66.157.237",
+          "port": 2087,
+          "transport": "tcp",
+          "service": "HTTP",
+          "product": "cloudflare_load_balancer",
+          "version": null,
+          "banner": "",
+          "source": "Censys"
+        },
+        {
+          "ip": "172.66.157.237",
+          "port": 2095,
+          "transport": "tcp",
+          "service": "HTTP",
+          "product": "cloudflare_load_balancer",
+          "version": null,
+          "banner": "",
+          "source": "Censys"
+        },
+        {
+          "ip": "172.66.157.237",
+          "port": 2096,
+          "transport": "tcp",
+          "service": "HTTP",
+          "product": "cloudflare_load_balancer",
+          "version": null,
+          "banner": "",
+          "source": "Censys"
+        },
+        {
+          "ip": "172.66.157.237",
+          "port": 8080,
+          "transport": "tcp",
+          "service": "HTTP",
+          "product": "cloudflare_load_balancer",
+          "version": null,
+          "banner": "",
+          "source": "Censys"
+        },
+        {
+          "ip": "172.66.157.237",
+          "port": 8443,
+          "transport": "tcp",
+          "service": "HTTP",
+          "product": "cloudflare_load_balancer",
+          "version": null,
+          "banner": "",
+          "source": "Censys"
+        },
+        {
+          "ip": "172.66.157.237",
+          "port": 8880,
+          "transport": "tcp",
+          "service": "HTTP",
+          "product": "cloudflare_load_balancer",
+          "version": null,
+          "banner": "",
+          "source": "Censys"
+        }
+      ],
+      "total_services": 26,
+      "notes": [
+        "Resolved example.org -> 104.20.26.136, 172.66.157.237"
+      ]
+    },
+    "ipinfo": {
+      "ip": "104.20.26.136",
+      "hostname": null,
+      "city": "San Francisco",
+      "region": "California",
+      "country": "US",
+      "loc": "37.7621,-122.3971",
+      "org": "AS13335 Cloudflare, Inc.",
+      "postal": "94107",
+      "timezone": "America/Los_Angeles",
+      "reason": "success"
+    },
+    "apivoid": {
+      "ip": "104.20.26.136",
+      "risk_score": 0,
+      "risk_score_note": "risk_score is computed by APIVoid; its method has not been verified by the team",
+      "is_vpn": false,
+      "is_proxy": false,
+      "is_tor": false,
+      "is_hosting": true,
+      "detections": 0,
+      "engines_count": 78,
+      "asn": "AS13335",
+      "org": "Cloudflare, Inc.",
+      "reason": "success"
+    },
+    "dorks": {
+      "target": "example.org",
+      "backend": "pagodo",
+      "mode": "demo",
+      "queries": [
+        {
+          "query": "site:example.org filetype:pdf \"guide\"",
+          "status": "ok",
+          "urls": [
+            "https://example.org/demo-public-guide.pdf"
+          ]
+        },
+        {
+          "query": "site:example.org intitle:\"documentation\"",
+          "status": "ok",
+          "urls": []
+        },
+        {
+          "query": "site:example.org \"public documentation\"",
+          "status": "ok",
+          "urls": []
+        }
+      ],
+      "urls": [
+        "https://example.org/demo-public-guide.pdf"
+      ],
+      "notes": [
+        "DỮ LIỆU DEMO TỰ TẠO; không gọi Google, không phải bằng chứng online"
+      ]
+    }
+  },
+  "network": {
+    "services": [
+      {
+        "ip": "104.20.26.136",
+        "port": 80,
+        "transport": "tcp",
+        "service": "HTTP (cloudflare_load_balancer)",
+        "banner": "",
+        "source": "Censys"
+      },
+      {
+        "ip": "104.20.26.136",
+        "port": 443,
+        "transport": "tcp",
+        "service": "HTTP (cloudflare_load_balancer)",
+        "banner": "",
+        "source": "Censys"
+      },
+      {
+        "ip": "104.20.26.136",
+        "port": 2052,
+        "transport": "tcp",
+        "service": "HTTP (cloudflare_load_balancer)",
+        "banner": "",
+        "source": "Censys"
+      },
+      {
+        "ip": "104.20.26.136",
+        "port": 2053,
+        "transport": "tcp",
+        "service": "HTTP (cloudflare_load_balancer)",
+        "banner": "",
+        "source": "Censys"
+      },
+      {
+        "ip": "104.20.26.136",
+        "port": 2082,
+        "transport": "tcp",
+        "service": "HTTP (cloudflare_load_balancer)",
+        "banner": "",
+        "source": "Censys"
+      },
+      {
+        "ip": "104.20.26.136",
+        "port": 2083,
+        "transport": "tcp",
+        "service": "HTTP (cloudflare_load_balancer)",
+        "banner": "",
+        "source": "Censys"
+      },
+      {
+        "ip": "104.20.26.136",
+        "port": 2086,
+        "transport": "tcp",
+        "service": "HTTP (cloudflare_load_balancer)",
+        "banner": "",
+        "source": "Censys"
+      },
+      {
+        "ip": "104.20.26.136",
+        "port": 2087,
+        "transport": "tcp",
+        "service": "HTTP (cloudflare_load_balancer)",
+        "banner": "",
+        "source": "Censys"
+      },
+      {
+        "ip": "104.20.26.136",
+        "port": 2095,
+        "transport": "tcp",
+        "service": "HTTP (cloudflare_load_balancer)",
+        "banner": "",
+        "source": "Censys"
+      },
+      {
+        "ip": "104.20.26.136",
+        "port": 2096,
+        "transport": "tcp",
+        "service": "HTTP (cloudflare_load_balancer)",
+        "banner": "",
+        "source": "Censys"
+      },
+      {
+        "ip": "104.20.26.136",
+        "port": 8080,
+        "transport": "tcp",
+        "service": "HTTP (cloudflare_load_balancer)",
+        "banner": "",
+        "source": "Censys"
+      },
+      {
+        "ip": "104.20.26.136",
+        "port": 8443,
+        "transport": "tcp",
+        "service": "HTTP (cloudflare_load_balancer)",
+        "banner": "",
+        "source": "Censys"
+      },
+      {
+        "ip": "104.20.26.136",
+        "port": 8880,
+        "transport": "tcp",
+        "service": "HTTP (cloudflare_load_balancer)",
+        "banner": "",
+        "source": "Censys"
+      },
+      {
+        "ip": "172.66.157.237",
+        "port": 80,
+        "transport": "tcp",
+        "service": "HTTP (cloudflare_load_balancer)",
+        "banner": "",
+        "source": "Censys"
+      },
+      {
+        "ip": "172.66.157.237",
+        "port": 443,
+        "transport": "tcp",
+        "service": "HTTP (cloudflare_load_balancer)",
+        "banner": "",
+        "source": "Censys"
+      },
+      {
+        "ip": "172.66.157.237",
+        "port": 2052,
+        "transport": "tcp",
+        "service": "HTTP (cloudflare_load_balancer)",
+        "banner": "",
+        "source": "Censys"
+      },
+      {
+        "ip": "172.66.157.237",
+        "port": 2053,
+        "transport": "tcp",
+        "service": "HTTP (cloudflare_load_balancer)",
+        "banner": "",
+        "source": "Censys"
+      },
+      {
+        "ip": "172.66.157.237",
+        "port": 2082,
+        "transport": "tcp",
+        "service": "HTTP (cloudflare_load_balancer)",
+        "banner": "",
+        "source": "Censys"
+      },
+      {
+        "ip": "172.66.157.237",
+        "port": 2083,
+        "transport": "tcp",
+        "service": "HTTP (cloudflare_load_balancer)",
+        "banner": "",
+        "source": "Censys"
+      },
+      {
+        "ip": "172.66.157.237",
+        "port": 2086,
+        "transport": "tcp",
+        "service": "HTTP (cloudflare_load_balancer)",
+        "banner": "",
+        "source": "Censys"
+      },
+      {
+        "ip": "172.66.157.237",
+        "port": 2087,
+        "transport": "tcp",
+        "service": "HTTP (cloudflare_load_balancer)",
+        "banner": "",
+        "source": "Censys"
+      },
+      {
+        "ip": "172.66.157.237",
+        "port": 2095,
+        "transport": "tcp",
+        "service": "HTTP (cloudflare_load_balancer)",
+        "banner": "",
+        "source": "Censys"
+      },
+      {
+        "ip": "172.66.157.237",
+        "port": 2096,
+        "transport": "tcp",
+        "service": "HTTP (cloudflare_load_balancer)",
+        "banner": "",
+        "source": "Censys"
+      },
+      {
+        "ip": "172.66.157.237",
+        "port": 8080,
+        "transport": "tcp",
+        "service": "HTTP (cloudflare_load_balancer)",
+        "banner": "",
+        "source": "Censys"
+      },
+      {
+        "ip": "172.66.157.237",
+        "port": 8443,
+        "transport": "tcp",
+        "service": "HTTP (cloudflare_load_balancer)",
+        "banner": "",
+        "source": "Censys"
+      },
+      {
+        "ip": "172.66.157.237",
+        "port": 8880,
+        "transport": "tcp",
+        "service": "HTTP (cloudflare_load_balancer)",
+        "banner": "",
+        "source": "Censys"
+      }
+    ],
+    "hosts": [
+      {
+        "ip": "104.20.26.136",
+        "org": "CLOUDFLARENET - Cloudflare, Inc.",
+        "asn": "AS13335",
+        "country": "United States",
+        "city": "San Francisco",
+        "ports": [
+          80,
+          443,
+          2052,
+          2053,
+          2082,
+          2083,
+          2086,
+          2087,
+          2095,
+          2096,
+          8080,
+          8443,
+          8880
+        ],
+        "vulns": [],
+        "source": "Censys"
+      },
+      {
+        "ip": "172.66.157.237",
+        "org": "CLOUDFLARENET - Cloudflare, Inc.",
+        "asn": "AS13335",
+        "country": "United States",
+        "city": "San Francisco",
+        "ports": [
+          80,
+          443,
+          2052,
+          2053,
+          2082,
+          2083,
+          2086,
+          2087,
+          2095,
+          2096,
+          8080,
+          8443,
+          8880
+        ],
+        "vulns": [],
+        "source": "Censys"
+      }
+    ],
+    "warnings": []
+  },
+  "warnings": [
+    "3 certificate(s) expire within 30 days",
+    "Dorks data is DEMO (synthetic), not real search results"
+  ]
+}

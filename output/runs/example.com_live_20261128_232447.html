@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="vi"><head><meta charset="utf-8"><title>PassiveRecon Report - example.com</title>
+<style>
+  body { font-family: Arial, sans-serif; margin: 28px; color: #1f2937; line-height: 1.5; }
+  h1 { color: #1e3a8a; margin-bottom: 4px; }
+  h2 { color: #1e40af; border-bottom: 1px solid #cbd5e1; padding-bottom: 4px; margin-top: 24px; }
+  table { border-collapse: collapse; width: 100%; margin-top: 10px; }
+  th, td { border: 1px solid #cbd5e1; padding: 8px 10px; text-align: left; }
+  th { background: #1e3a8a; color: #fff; }
+  tr:nth-child(even) { background: #f8fafc; }
+</style></head><body>
+<h1>PassiveRecon Toolkit — Báo cáo Tổng hợp</h1>
+<p><strong>Mục tiêu:</strong> example.com | <strong>Thời gian:</strong> 2026-11-28T16:24:47.505237+00:00 | <strong>JSON gốc:</strong> example.com_live_20261128_232447.json</p>
+
+<h2>1. Trạng thái thực thi các module</h2>
+<ul>
+  <li><strong>Thành công (ok):</strong> whois, dns, crtsh, shodan, censys, ipinfo, apivoid, dorks</li>
+  <li><strong>Bỏ qua (skipped):</strong> Không có</li>
+  <li><strong>Lỗi (error):</strong> Không có</li>
+</ul>
+
+<h2>2. Thông tin đăng ký, DNS &amp; Vị trí IP</h2>
+<ul>
+  <li><strong>Registrar (WHOIS):</strong> RESERVED-Internet Assigned Numbers Authority</li>
+  <li><strong>Bản ghi DNS:</strong> {&#x27;A&#x27;: [&#x27;172.66.147.243&#x27;, &#x27;104.20.23.154&#x27;], &#x27;AAAA&#x27;: [&#x27;2606:4700:10::6814:179a&#x27;, &#x27;2606:4700:10::ac42:93f3&#x27;], &#x27;NS&#x27;: [&#x27;hera.ns.cloudflare.com.&#x27;,</li>
+  <li><strong>Vị trí / ASN (IPinfo):</strong> San Francisco, US — AS13335 Cloudflare, Inc.</li>
+  <li><strong>Subdomain tìm thấy (crt.sh):</strong> 5</li>
+</ul>
+<ul><li>dev.example.com</li>
+<li>m.example.com</li>
+<li>products.example.com</li>
+<li>support.example.com</li>
+<li>www.example.com</li></ul>
+
+<h2>3. Thông tin Host (Shodan &amp; Censys)</h2>
+<table><tr><th>IP</th><th>Tổ chức / ASN</th><th>Vị trí</th><th>Cổng mở</th><th>Nguồn</th></tr><tr><td>104.20.23.154</td><td>Cloudflare, Inc. (AS13335)</td><td>San Francisco, United States</td><td>80, 443, 2052, 2053, 2082, 2083, 2086, 2087, 2095, 2096, 8080, 8443, 8880</td><td><strong>Shodan, Censys</strong></td></tr>
+<tr><td>172.66.147.243</td><td>Cloudflare, Inc. (AS13335)</td><td>San Francisco, United States</td><td>80, 443, 2052, 2053, 2082, 2083, 2086, 2087, 2095, 2096, 8080, 8443, 8880</td><td><strong>Shodan, Censys</strong></td></tr></table>
+
+<h2>4. Cổng &amp; Dịch vụ lộ ra ngoài đã gộp (Shodan + Censys)</h2>
+<table><tr><th>IP</th><th>Cổng</th><th>Dịch vụ / Banner</th><th>Nguồn đối chiếu</th></tr><tr><td>104.20.23.154</td><td>80/tcp</td><td>http (cloudflare_load_balancer)</td><td><strong>Shodan, Censys</strong></td></tr>
+<tr><td>104.20.23.154</td><td>443/tcp</td><td>CloudFlare</td><td><strong>Shodan, Censys</strong></td></tr>
+<tr><td>104.20.23.154</td><td>2052/tcp</td><td>auto (cloudflare_load_balancer)</td><td><strong>Shodan, Censys</strong></td></tr>
+<tr><td>104.20.23.154</td><td>2053/tcp</td><td>auto (cloudflare_load_balancer)</td><td><strong>Shodan, Censys</strong></td></tr>
+<tr><td>104.20.23.154</td><td>2082/tcp</td><td>http-simple-new (cloudflare_load_balancer)</td><td><strong>Shodan, Censys</strong></td></tr>
+<tr><td>104.20.23.154</td><td>2083/tcp</td><td>https-simple-new (cloudflare_load_balancer)</td><td><strong>Shodan, Censys</strong></td></tr>
+<tr><td>104.20.23.154</td><td>2086/tcp</td><td>http-simple-new (cloudflare_load_balancer)</td><td><strong>Shodan, Censys</strong></td></tr>
+<tr><td>104.20.23.154</td><td>2087/tcp</td><td>language-server-protocol (cloudflare_load_balancer)</td><td><strong>Shodan, Censys</strong></td></tr>
+<tr><td>104.20.23.154</td><td>2095/tcp</td><td>auto (cloudflare_load_balancer)</td><td><strong>Shodan, Censys</strong></td></tr>
+<tr><td>104.20.23.154</td><td>2096/tcp</td><td>auto (cloudflare_load_balancer)</td><td><strong>Shodan, Censys</strong></td></tr>
+<tr><td>104.20.23.154</td><td>8080/tcp</td><td>http-simple-new (cloudflare_load_balancer)</td><td><strong>Shodan, Censys</strong></td></tr>
+<tr><td>104.20.23.154</td><td>8443/tcp</td><td>CloudFlare</td><td><strong>Shodan, Censys</strong></td></tr>
+<tr><td>104.20.23.154</td><td>8880/tcp</td><td>https-simple-new (cloudflare_load_balancer)</td><td><strong>Shodan, Censys</strong></td></tr>
+<tr><td>172.66.147.243</td><td>80/tcp</td><td>http (cloudflare_load_balancer)</td><td><strong>Shodan, Censys</strong></td></tr>
+<tr><td>172.66.147.243</td><td>443/tcp</td><td>CloudFlare</td><td><strong>Shodan, Censys</strong></td></tr>
+<tr><td>172.66.147.243</td><td>2052/tcp</td><td>auto (cloudflare_load_balancer)</td><td><strong>Shodan, Censys</strong></td></tr>
+<tr><td>172.66.147.243</td><td>2053/tcp</td><td>HTTP (cloudflare_load_balancer)</td><td><strong>Censys</strong></td></tr>
+<tr><td>172.66.147.243</td><td>2082/tcp</td><td>http-simple-new (cloudflare_load_balancer)</td><td><strong>Shodan, Censys</strong></td></tr>
+<tr><td>172.66.147.243</td><td>2083/tcp</td><td>https-simple-new (cloudflare_load_balancer)</td><td><strong>Shodan, Censys</strong></td></tr>
+<tr><td>172.66.147.243</td><td>2086/tcp</td><td>http-simple-new (cloudflare_load_balancer)</td><td><strong>Shodan, Censys</strong></td></tr>
+<tr><td>172.66.147.243</td><td>2087/tcp</td><td>language-server-protocol (cloudflare_load_balancer)</td><td><strong>Shodan, Censys</strong></td></tr>
+<tr><td>172.66.147.243</td><td>2095/tcp</td><td>auto (cloudflare_load_balancer)</td><td><strong>Shodan, Censys</strong></td></tr>
+<tr><td>172.66.147.243</td><td>2096/tcp</td><td>HTTP (cloudflare_load_balancer)</td><td><strong>Censys</strong></td></tr>
+<tr><td>172.66.147.243</td><td>8080/tcp</td><td>http-simple-new (cloudflare_load_balancer)</td><td><strong>Shodan, Censys</strong></td></tr>
+<tr><td>172.66.147.243</td><td>8443/tcp</td><td>CloudFlare</td><td><strong>Shodan, Censys</strong></td></tr>
+<tr><td>172.66.147.243</td><td>8880/tcp</td><td>https-simple-new (cloudflare_load_balancer)</td><td><strong>Shodan, Censys</strong></td></tr></table>
+
+<h2>5. Cờ cảnh báo tự động (2)</h2>
+<ul><li>4 certificate(s) expire within 30 days</li>
+<li>Dorks data is DEMO (synthetic), not real search results</li></ul>
+</body></html>

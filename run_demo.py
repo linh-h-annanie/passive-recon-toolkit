@@ -155,7 +155,7 @@ def main():
     for target in args.targets:
         if args.mode == "live":
             print(f"\n>>> Đang chạy thu thập dữ liệu LIVE cho: {target} ...")
-            subprocess.run([sys.executable, str(ROOT / "main.py"), target, "--dorks", args.dorks], check=True)
+            subprocess.run([sys.executable, str(ROOT / "main.py"), target, "--mode", "live", "--i-allow-network", "--dorks", args.dorks], check=True)
         json_path = find_latest_json(target)
         render_terminal_demo(json_path)
 
